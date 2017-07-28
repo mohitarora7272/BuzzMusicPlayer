@@ -1,5 +1,7 @@
 package com.alpha.music.helper;
 
+import android.annotation.SuppressLint;
+
 /**
  * @author Mohit Arora
  */
@@ -73,6 +75,7 @@ public class StopWatch {
         }
     }
 
+    @SuppressLint("DefaultLocale")
     @Override
     public String toString() {
         return String.format("%d millis", getElapsedTime());
