@@ -1,28 +1,17 @@
-# Orin
-Orin is a music player based on Karim Abou Zeid\'s open source Phonograph music player,
-I always wanted to implement  Aleksandar Tešić\'s designs of a music player that can be found here!
-https://material.uplabs.com/posts/a-music-player-in-material-design-a-concept, but haven\'t had the time to start one from scratch,
-so well I used Phonograph as a base , I dont have permissions to use these designs yet so I can\'t release the app on the Playstore
-
-<img src="SCREENDATA/GIF1.gif" width="250" />
-<img src="SCREENDATA/SCREENDATA1.png" width="850" />
-<img src="SCREENDATA/SCREENDATA2.png" width="850" />
-<img src="SCREENDATA/SCREENDATA3.png" width="850" />
+# Alpha Music Player
+Alpha Music Player is a stunning Music Player, beautifully crafted with Material Design in mind and packed with some extraordinary powerful features.
+It is one of the Best Music Players which can fulfill all your Musical needs.\n\n
+The built-in Equalizer adds a great value to your music hearing experience.\n\n
+The more attractive and intuitive User Interface combined with the crisp and clean layouts will give you the best user experience.
 
 #### Demo
 
-See demo by downloading [Demo Apk](https://github.com/aliumujib/Orin/blob/master/apk/app-debug.apk)
+See demo by downloading [Demo Apk]()
 
 #### How to run
 ```bash
 # Get the project
-git clone https://github.com/aliumujib/Orin.git
-
-# Change directory
-cd Orin/app
-
-# Change fabric key
-cd replace YOUR_FABRIC_CRASHLYTICS_KEY_HERE with your own crashlytics key
+git clone https://github.com/mohitarora7272/AlphaMusicPlayer.git
 
 # Open with android studio
 import with Android Studio and do what you will
