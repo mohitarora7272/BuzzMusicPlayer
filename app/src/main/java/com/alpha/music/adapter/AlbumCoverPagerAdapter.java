@@ -13,7 +13,7 @@ import com.alpha.music.glide.SongGlideRequest;
 import com.alpha.music.model.Song;
 import com.bumptech.glide.Glide;
 import com.alpha.music.R;
-import com.alpha.music.glide.PhonographColoredTarget;
+import com.alpha.music.glide.AlphaMusicColoredTarget;
 import com.alpha.music.misc.CustomFragmentStatePagerAdapter;
 import com.alpha.music.util.PreferenceUtil;
 
@@ -131,7 +131,7 @@ public class AlbumCoverPagerAdapter extends CustomFragmentStatePagerAdapter {
             SongGlideRequest.Builder.from(Glide.with(this), song)
                     .checkIgnoreMediaStore(getActivity())
                     .generatePalette(getActivity()).build()
-                    .into(new PhonographColoredTarget(albumCover) {
+                    .into(new AlphaMusicColoredTarget(albumCover) {
                         @Override
                         public void onColorReady(int color) {
                             setColor(color);

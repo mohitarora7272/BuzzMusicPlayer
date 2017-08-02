@@ -27,7 +27,7 @@ import com.kabouzeid.appthemehelper.util.ColorUtil;
 import com.kabouzeid.appthemehelper.util.MaterialValueHelper;
 import com.alpha.music.R;
 import com.alpha.music.adapter.base.MediaEntryViewHolder;
-import com.alpha.music.glide.PhonographColoredTarget;
+import com.alpha.music.glide.AlphaMusicColoredTarget;
 import com.alpha.music.glide.artistimage.ArtistImage;
 import com.alpha.music.glide.palette.BitmapPaletteTranscoder;
 import com.alpha.music.model.Artist;
@@ -133,12 +133,12 @@ public class ArtistAdapter extends AbsMultiSelectAdapter<ArtistAdapter.ViewHolde
                 .asBitmap()
                 .transcode(new BitmapPaletteTranscoder(activity), BitmapPaletteWrapper.class)
                 .diskCacheStrategy(DiskCacheStrategy.SOURCE)
-                .placeholder(R.drawable.default_artist_image)
+                .placeholder(R.drawable.default_album_art)
                 .animate(android.R.anim.fade_in)
                 .priority(Priority.LOW)
                 .signature(ArtistSignatureUtil.getInstance(activity).getArtistSignature(artist.getName()))
                 .override(Target.SIZE_ORIGINAL, Target.SIZE_ORIGINAL)
-                .into(new PhonographColoredTarget(holder.image) {
+                .into(new AlphaMusicColoredTarget(holder.image) {
                     @Override
                     public void onLoadCleared(Drawable placeholder) {
                         super.onLoadCleared(placeholder);

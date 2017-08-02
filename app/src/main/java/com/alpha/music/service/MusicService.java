@@ -35,6 +35,7 @@ import android.support.v4.media.session.PlaybackStateCompat;
 import android.widget.Toast;
 
 import com.alpha.music.appwidgets.AppWidgetBig;
+import com.alpha.music.appwidgets.AppWidgetCard;
 import com.alpha.music.appwidgets.AppWidgetSmall;
 import com.alpha.music.glide.SongGlideRequest;
 import com.alpha.music.loader.PlaylistSongLoader;
@@ -128,6 +129,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
     private AppWidgetBig appWidgetBig = AppWidgetBig.getInstance();
     private AppWidgetClassic appWidgetClassic = AppWidgetClassic.getInstance();
     private AppWidgetSmall appWidgetSmall = AppWidgetSmall.getInstance();
+    private AppWidgetCard appWidgetCard = AppWidgetCard.getInstance();
 
     private Playback playback;
     private ArrayList<Song> playingQueue = new ArrayList<>();
@@ -216,7 +218,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
 
         mediaSession.setActive(true);
 
-        sendBroadcast(new Intent("com.kabouzeid.gramophone.PHONOGRAPH_MUSIC_SERVICE_CREATED"));
+        sendBroadcast(new Intent("com.alpha.music.PHONOGRAPH_MUSIC_SERVICE_CREATED"));
     }
 
     private AudioManager getAudioManager() {
@@ -357,7 +359,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
         PreferenceUtil.getInstance(this).unregisterOnSharedPreferenceChangedListener(this);
         wakeLock.release();
 
-        sendBroadcast(new Intent("com.kabouzeid.gramophone.PHONOGRAPH_MUSIC_SERVICE_DESTROYED"));
+        sendBroadcast(new Intent("com.alpha.music.PHONOGRAPH_MUSIC_SERVICE_DESTROYED"));
     }
 
     @Override
@@ -1055,6 +1057,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
         appWidgetBig.notifyChange(this, what);
         appWidgetClassic.notifyChange(this, what);
         appWidgetSmall.notifyChange(this, what);
+        appWidgetCard.notifyChange(this, what);
     }
 
     private static final long MEDIA_SESSION_ACTIONS = PlaybackStateCompat.ACTION_PLAY
@@ -1295,6 +1298,9 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
             } else if (AppWidgetBig.NAME.equals(command)) {
                 final int[] ids = intent.getIntArrayExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS);
                 appWidgetBig.performUpdate(MusicService.this, ids);
+            }else if (AppWidgetCard.NAME.equals(command)) {
+                final int[] ids = intent.getIntArrayExtra(AppWidgetManager.EXTRA_APPWIDGET_IDS);
+                appWidgetCard.performUpdate(MusicService.this, ids);
             }
         }
     };

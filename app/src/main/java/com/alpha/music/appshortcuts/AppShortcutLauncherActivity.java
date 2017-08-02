@@ -18,7 +18,7 @@ import com.alpha.music.appshortcuts.shortcuttype.ShuffleAllShortcutType;
  */
 
 public class AppShortcutLauncherActivity extends Activity {
-    public static final String KEY_SHORTCUT_TYPE = "com.kabouzeid.gramophone.appshortcuts.ShortcutType";
+    public static final String KEY_SHORTCUT_TYPE = "com.alpha.music.appshortcuts.ShortcutType";
 
     public static final int SHORTCUT_TYPE_SHUFFLE_ALL = 0;
     public static final int SHORTCUT_TYPE_TOP_TRACKS = 1;

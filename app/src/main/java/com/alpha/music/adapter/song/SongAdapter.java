@@ -25,7 +25,7 @@ import com.bumptech.glide.Glide;
 import com.kabouzeid.appthemehelper.util.ColorUtil;
 import com.kabouzeid.appthemehelper.util.MaterialValueHelper;
 import com.alpha.music.R;
-import com.alpha.music.glide.PhonographColoredTarget;
+import com.alpha.music.glide.AlphaMusicColoredTarget;
 import com.alpha.music.helper.menu.SongMenuHelper;
 import com.simplecityapps.recyclerview_fastscroll.views.FastScrollRecyclerView;
 
@@ -136,7 +136,7 @@ public class SongAdapter extends AbsMultiSelectAdapter<SongAdapter.ViewHolder, S
         SongGlideRequest.Builder.from(Glide.with(activity), song)
                 .checkIgnoreMediaStore(activity)
                 .generatePalette(activity).build()
-                .into(new PhonographColoredTarget(holder.image) {
+                .into(new AlphaMusicColoredTarget(holder.image) {
                     @Override
                     public void onLoadCleared(Drawable placeholder) {
                         super.onLoadCleared(placeholder);

@@ -18,7 +18,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Phonograph.Light"
+        android:theme="@style/Theme.AlphaMusic.Light"
         tools:ignore="AllowBackup,UnusedAttribute">
 
         <activity android:name="com.alpha.music.ui.activities.MainActivity">
@@ -137,7 +137,7 @@
             android:name="com.lge.support.SPLIT_WINDOW"
             android:value="true" />
         <meta-data
-            android:name="com.alpha.music.glide.PhonographGlideModule"
+            android:name="com.alpha.music.glide.AlphaMusicGlideModule"
             android:value="GlideModule" />
         <meta-data
             android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
@@ -185,6 +185,17 @@
             <meta-data
                 android:name="android.appwidget.provider"
                 android:resource="@xml/app_widget_small_info" />
+        </receiver>
+        <receiver
+            android:name="com.alpha.music.appwidgets.AppWidgetCard"
+            android:exported="false"
+            android:label="@string/app_widget_card_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/app_widget_card_info"/>
         </receiver>
 
     </application>

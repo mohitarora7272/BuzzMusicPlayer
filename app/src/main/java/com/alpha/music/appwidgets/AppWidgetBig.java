@@ -59,7 +59,7 @@ public class AppWidgetBig extends BaseAppWidget {
      * Initialize given widgets to default state, where we launch Music on
      * default click and hide actions if service not running.
      */
-    private void defaultAppWidget(final Context context, final int[] appWidgetIds) {
+    protected void defaultAppWidget(final Context context, final int[] appWidgetIds) {
         final RemoteViews appWidgetView = new RemoteViews(context.getPackageName(), R.layout.app_widget_big);
 
         appWidgetView.setViewVisibility(R.id.media_titles, View.INVISIBLE);
@@ -72,7 +72,7 @@ public class AppWidgetBig extends BaseAppWidget {
         pushUpdate(context, appWidgetIds, appWidgetView);
     }
 
-    private void pushUpdate(final Context context, final int[] appWidgetIds, final RemoteViews views) {
+    protected void pushUpdate(final Context context, final int[] appWidgetIds, final RemoteViews views) {
         final AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
         if (appWidgetIds != null) {
             appWidgetManager.updateAppWidget(appWidgetIds, views);
@@ -85,7 +85,7 @@ public class AppWidgetBig extends BaseAppWidget {
      * Check against {@link AppWidgetManager} if there are any instances of this
      * widget.
      */
-    private boolean hasInstances(final Context context) {
+    protected boolean hasInstances(final Context context) {
         final AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(context);
         final int[] mAppWidgetIds = appWidgetManager.getAppWidgetIds(new ComponentName(context,
                 getClass()));

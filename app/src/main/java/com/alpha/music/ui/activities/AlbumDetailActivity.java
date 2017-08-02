@@ -39,7 +39,7 @@ import com.kabouzeid.appthemehelper.util.MaterialValueHelper;
 import com.alpha.music.R;
 import com.alpha.music.adapter.song.AlbumSongAdapter;
 import com.alpha.music.dialogs.SleepTimerDialog;
-import com.alpha.music.glide.PhonographColoredTarget;
+import com.alpha.music.glide.AlphaMusicColoredTarget;
 import com.alpha.music.glide.palette.BitmapPaletteWrapper;
 import com.alpha.music.interfaces.CabHolder;
 import com.alpha.music.interfaces.LoaderIds;
@@ -194,7 +194,7 @@ public class AlbumDetailActivity extends AbsSlidingMusicPanelActivity implements
                         return false;
                     }
                 })
-                .into(new PhonographColoredTarget(albumArtImageView) {
+                .into(new AlphaMusicColoredTarget(albumArtImageView) {
                     @Override
                     public void onColorReady(int color) {
                         setColors(color);
@@ -230,20 +230,6 @@ public class AlbumDetailActivity extends AbsSlidingMusicPanelActivity implements
                 // necessary to fix a bug
                 recyclerView.scrollBy(0, 1);
                 recyclerView.scrollBy(0, -1);
-
-//                if (getAlbum().getSongCount() > 10) {
-//                    ViewGroup.LayoutParams params = recyclerView.getLayoutParams();
-//                    params.height = contentView.getHeight() * 3;
-//                    recyclerView.setLayoutParams(params);
-//                    recyclerView.requestLayout();
-//                }else {
-//                    ViewGroup.LayoutParams params = recyclerView.getLayoutParams();
-//                    params.height = (int) (contentView.getHeight());
-//                    recyclerView.setLayoutParams(params);
-//                    recyclerView.requestLayout();
-//                }
-//
-//                recyclerView.setTranslationY(-(albumArtViewHeight + getResources().getDimensionPixelSize(R.dimen.thirthy_dp)));
             }
         });
     }

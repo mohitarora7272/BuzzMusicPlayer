@@ -15,7 +15,7 @@ import java.io.InputStream;
 /**
  * @author Mohit Arora
  */
-public class PhonographGlideModule implements GlideModule {
+public class AlphaMusicGlideModule implements GlideModule {
     @Override
     public void applyOptions(Context context, GlideBuilder builder) {
 

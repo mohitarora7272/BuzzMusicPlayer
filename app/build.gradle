@@ -94,9 +94,7 @@ dependencies {
     compile 'com.github.bumptech.glide:okhttp3-integration:1.5.0'
     compile 'com.heinrichreimersoftware:material-intro:1.6.2'
     compile 'me.zhanghai.android.materialprogressbar:library:1.4.1'
-    compile 'com.github.captain-miao:optroundcardview:1.0.0'
     compile 'org.eclipse.mylyn.github:org.eclipse.egit.github.core:2.1.5'
-    compile 'de.hdodenhof:circleimageview:1.2.1'
     compile 'com.jakewharton:butterknife:8.6.0'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.6.0'
 }

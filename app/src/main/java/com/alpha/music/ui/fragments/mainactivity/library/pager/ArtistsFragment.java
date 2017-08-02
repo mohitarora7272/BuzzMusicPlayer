@@ -7,13 +7,13 @@ import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
 import android.support.v7.widget.GridLayoutManager;
 
-import com.alpha.music.adapter.artist.ArtistAdapter;
-import com.alpha.music.loader.ArtistLoader;
-import com.alpha.music.util.PreferenceUtil;
 import com.alpha.music.R;
+import com.alpha.music.adapter.artist.ArtistAdapter;
 import com.alpha.music.interfaces.LoaderIds;
+import com.alpha.music.loader.ArtistLoader;
 import com.alpha.music.misc.WrappedAsyncTaskLoader;
 import com.alpha.music.model.Artist;
+import com.alpha.music.util.PreferenceUtil;
 
 import java.util.ArrayList;
 
@@ -65,12 +65,6 @@ public class ArtistsFragment extends AbsLibraryPagerRecyclerViewCustomGridSizeFr
     @Override
     protected int loadGridSize() {
         return PreferenceUtil.getInstance(getActivity()).getArtistGridSize(getActivity());
-    }
-
-    @Override
-    protected int getItemLayoutRes() {
-
-        return R.layout.item_artist_circle;
     }
 
     @Override

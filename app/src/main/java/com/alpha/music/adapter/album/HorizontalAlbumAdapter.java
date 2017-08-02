@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.alpha.music.glide.PhonographColoredTarget;
+import com.alpha.music.glide.AlphaMusicColoredTarget;
 import com.alpha.music.glide.SongGlideRequest;
 import com.alpha.music.helper.HorizontalAdapterHelper;
 import com.alpha.music.interfaces.CabHolder;
@@ -56,7 +56,7 @@ public class HorizontalAlbumAdapter extends AlbumAdapter {
         SongGlideRequest.Builder.from(Glide.with(activity), album.safeGetFirstSong())
                 .checkIgnoreMediaStore(activity)
                 .generatePalette(activity).build()
-                .into(new PhonographColoredTarget(holder.image) {
+                .into(new AlphaMusicColoredTarget(holder.image) {
                     @Override
                     public void onLoadCleared(Drawable placeholder) {
                         super.onLoadCleared(placeholder);

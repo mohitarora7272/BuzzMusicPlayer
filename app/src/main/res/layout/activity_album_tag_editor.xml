@@ -27,6 +27,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scaleType="centerCrop"
+                    android:contentDescription="@string/app_name"
                     android:src="@drawable/default_album_art"
                     android:transitionName="@string/transition_album_art"
                     tools:ignore="UnusedAttribute" />

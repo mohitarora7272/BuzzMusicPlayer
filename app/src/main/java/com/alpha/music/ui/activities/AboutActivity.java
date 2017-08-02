@@ -6,18 +6,14 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import com.afollestad.materialdialogs.internal.ThemeSingleton;
 import com.alpha.music.R;
-import com.alpha.music.dialogs.ChangelogDialog;
 import com.alpha.music.ui.activities.base.AbsBaseActivity;
-import com.alpha.music.ui.activities.bugreport.BugReportActivity;
 import com.alpha.music.ui.activities.intro.AppIntroActivity;
 import com.kabouzeid.appthemehelper.ThemeStore;
 
@@ -30,70 +26,12 @@ import de.psdev.licensesdialog.LicensesDialog;
  */
 @SuppressWarnings("FieldCanBeLocal")
 public class AboutActivity extends AbsBaseActivity implements View.OnClickListener {
-
-    //private static String GITHUB = "https://github.com/kabouzeid/Phonograph";
-    private static String GITHUB = "https://github.com/mohitarora7272/AlphaMusicPlayer";
-
-    private static String GOOGLE_PLUS = "https://google.com/";
-    private static String TWITTER = "https://twitter.com/mohitarora7272";
-    private static String WEBSITE = "https://kabouzeid.com/";
-
-    private static String GOOGLE_PLUS_COMMUNITY = "";
-    private static String TRANSLATE = "";
-    private static String RATE_ON_GOOGLE_PLAY = "https://play.google.com/store/apps/details?id=com.alpha.music";
-
-    private static String AIDAN_FOLLESTAD_GOOGLE_PLUS = "https://plus.google.com/+mohitarora7272";
-    private static String AIDAN_FOLLESTAD_GITHUB = "https://github.com/mohitarora7272";
-
-    private static String MICHAEL_COOK_GOOGLE_PLUS = "https://plus.google.com/+mohitarora7272";
-    private static String MICHAEL_COOK_WEBSITE = "";
-
-    private static String MAARTEN_CORPEL_GOOGLE_PLUS = "https://google.com/+mohitarora7272";
-
-    private static String ALEKSANDAR_TESIC_GOOGLE_PLUS = "https://google.com/+mohitarora7272";
-
     @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @BindView(R.id.app_version)
-    TextView appVersion;
-    @BindView(R.id.changelog)
-    LinearLayout changelog;
     @BindView(R.id.intro)
     LinearLayout intro;
     @BindView(R.id.licenses)
     LinearLayout licenses;
-    @BindView(R.id.write_an_email)
-    LinearLayout writeAnEmail;
-    @BindView(R.id.add_to_google_plus_circles)
-    LinearLayout addToGooglePlusCircles;
-    @BindView(R.id.follow_on_twitter)
-    LinearLayout followOnTwitter;
-    @BindView(R.id.fork_on_github)
-    LinearLayout forkOnGitHub;
-    @BindView(R.id.visit_website)
-    LinearLayout visitWebsite;
-    @BindView(R.id.report_bugs)
-    LinearLayout reportBugs;
-    @BindView(R.id.join_google_plus_community)
-    LinearLayout joinGooglePlusCommunity;
-    @BindView(R.id.translate)
-    LinearLayout translate;
-    @BindView(R.id.donate)
-    LinearLayout donate;
-    @BindView(R.id.rate_on_google_play)
-    LinearLayout rateOnGooglePlay;
-    @BindView(R.id.aidan_follestad_google_plus)
-    AppCompatButton aidanFollestadGooglePlus;
-    @BindView(R.id.aidan_follestad_git_hub)
-    AppCompatButton aidanFollestadGitHub;
-    @BindView(R.id.michael_cook_google_plus)
-    AppCompatButton michaelCookGooglePlus;
-    @BindView(R.id.michael_cook_website)
-    AppCompatButton michaelCookWebsite;
-    @BindView(R.id.maarten_corpel_google_plus)
-    AppCompatButton maartenCorpelGooglePlus;
-    @BindView(R.id.aleksandar_tesic_google_plus)
-    AppCompatButton aleksandarTesicGooglePlus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,29 +61,12 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
     }
 
     private void setUpAppVersion() {
-        appVersion.setText(getCurrentVersionName(this));
+        //appVersion.setText(getCurrentVersionName(this));
     }
 
     private void setUpOnClickListeners() {
-        changelog.setOnClickListener(this);
         intro.setOnClickListener(this);
         licenses.setOnClickListener(this);
-        addToGooglePlusCircles.setOnClickListener(this);
-        followOnTwitter.setOnClickListener(this);
-        forkOnGitHub.setOnClickListener(this);
-        visitWebsite.setOnClickListener(this);
-        reportBugs.setOnClickListener(this);
-        writeAnEmail.setOnClickListener(this);
-        joinGooglePlusCommunity.setOnClickListener(this);
-        translate.setOnClickListener(this);
-        rateOnGooglePlay.setOnClickListener(this);
-        donate.setOnClickListener(this);
-        aidanFollestadGooglePlus.setOnClickListener(this);
-        aidanFollestadGitHub.setOnClickListener(this);
-        michaelCookGooglePlus.setOnClickListener(this);
-        michaelCookWebsite.setOnClickListener(this);
-        maartenCorpelGooglePlus.setOnClickListener(this);
-        aleksandarTesicGooglePlus.setOnClickListener(this);
     }
 
     @Override
@@ -168,48 +89,10 @@ public class AboutActivity extends AbsBaseActivity implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
-        if (v == changelog) {
-            ChangelogDialog.create().show(getSupportFragmentManager(), "CHANGELOG_DIALOG");
-        } else if (v == licenses) {
+        if (v == licenses) {
             showLicenseDialog();
         } else if (v == intro) {
             startActivity(new Intent(this, AppIntroActivity.class));
-        } else if (v == addToGooglePlusCircles) {
-            openUrl(GOOGLE_PLUS);
-        } else if (v == followOnTwitter) {
-            openUrl(TWITTER);
-        } else if (v == forkOnGitHub) {
-            openUrl(GITHUB);
-        } else if (v == visitWebsite) {
-            openUrl(WEBSITE);
-        } else if (v == reportBugs) {
-            startActivity(new Intent(this, BugReportActivity.class));
-        } else if (v == writeAnEmail) {
-            Intent intent = new Intent(Intent.ACTION_SENDTO);
-            intent.setData(Uri.parse("mailto:iamdeveloper7272@gmail.com"));
-            intent.putExtra(Intent.EXTRA_EMAIL, "contact@iamdeveloper7272@gmail.com");
-            intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.app_name));
-            startActivity(Intent.createChooser(intent, "E-Mail"));
-        } else if (v == joinGooglePlusCommunity) {
-            openUrl(GOOGLE_PLUS_COMMUNITY);
-        } else if (v == translate) {
-            openUrl(TRANSLATE);
-        } else if (v == rateOnGooglePlay) {
-            openUrl(RATE_ON_GOOGLE_PLAY);
-        } else if (v == donate) {
-            //DonationsDialog.create().show(getSupportFragmentManager(), "DONATION_DIALOG");
-        } else if (v == aidanFollestadGooglePlus) {
-            openUrl(AIDAN_FOLLESTAD_GOOGLE_PLUS);
-        } else if (v == aidanFollestadGitHub) {
-            openUrl(AIDAN_FOLLESTAD_GITHUB);
-        } else if (v == michaelCookGooglePlus) {
-            openUrl(MICHAEL_COOK_GOOGLE_PLUS);
-        } else if (v == michaelCookWebsite) {
-            openUrl(MICHAEL_COOK_WEBSITE);
-        } else if (v == maartenCorpelGooglePlus) {
-            openUrl(MAARTEN_CORPEL_GOOGLE_PLUS);
-        } else if (v == aleksandarTesicGooglePlus) {
-            openUrl(ALEKSANDAR_TESIC_GOOGLE_PLUS);
         }
     }
 

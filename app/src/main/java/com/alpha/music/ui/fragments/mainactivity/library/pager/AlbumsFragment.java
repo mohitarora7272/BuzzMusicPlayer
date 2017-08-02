@@ -2,48 +2,28 @@ package com.alpha.music.ui.fragments.mainactivity.library.pager;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
 import android.support.v7.widget.GridLayoutManager;
-import android.view.View;
 
+import com.alpha.music.R;
 import com.alpha.music.adapter.album.AlbumAdapter;
+import com.alpha.music.interfaces.LoaderIds;
 import com.alpha.music.loader.AlbumLoader;
+import com.alpha.music.misc.WrappedAsyncTaskLoader;
 import com.alpha.music.model.Album;
 import com.alpha.music.util.PreferenceUtil;
-import com.alpha.music.R;
-import com.alpha.music.interfaces.LoaderIds;
-import com.alpha.music.misc.WrappedAsyncTaskLoader;
-import com.alpha.music.util.Util;
-import com.alpha.music.util.ViewUtil;
-import com.alpha.music.views.GridSpacingItemDecoration;
-import com.alpha.music.views.IndexLayoutManager;
-import com.github.captain_miao.optroundcardview.OptRoundCardView;
-import com.kabouzeid.appthemehelper.util.ATHUtil;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-
-import butterknife.BindView;
 
 /**
  * @author Mohit Arora
  */
 public class AlbumsFragment extends AbsLibraryPagerRecyclerViewCustomGridSizeFragment<AlbumAdapter, GridLayoutManager> implements LoaderManager.LoaderCallbacks<ArrayList<Album>> {
     public static final String TAG = AlbumsFragment.class.getSimpleName();
+
     private static final int LOADER_ID = LoaderIds.ALBUMS_FRAGMENT;
-
-    @Nullable
-    @BindView(R.id.index_layout)
-    IndexLayoutManager indexLayoutManager;
-
-    @Nullable
-    @BindView(R.id.card_view)
-    OptRoundCardView optRoundCardView;
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
@@ -89,9 +69,7 @@ public class AlbumsFragment extends AbsLibraryPagerRecyclerViewCustomGridSizeFra
     protected void setGridSize(int gridSize) {
         getLayoutManager().setSpanCount(gridSize);
         getAdapter().notifyDataSetChanged();
-
     }
-
 
     @Override
     protected int loadGridSize() {
@@ -130,73 +108,12 @@ public class AlbumsFragment extends AbsLibraryPagerRecyclerViewCustomGridSizeFra
 
     @Override
     public void onLoadFinished(Loader<ArrayList<Album>> loader, ArrayList<Album> data) {
-        sortAlbums(data);
         getAdapter().swapDataSet(data);
     }
 
     @Override
     public void onLoaderReset(Loader<ArrayList<Album>> loader) {
         getAdapter().swapDataSet(new ArrayList<Album>());
-    }
-
-    private void sortAlbums(ArrayList<Album> data) {
-        Collections.sort(data, new Comparator<Album>() {
-            @Override
-            public int compare(Album lhs, Album rhs) {
-                return lhs.getTitle().compareToIgnoreCase(rhs.getTitle());
-            }
-        });
-    }
-
-    @Override
-    public void onViewCreated(View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-        if (!Util.isTablet(getResources())) {
-            ViewUtil.setMargins(recyclerView, 0, 32, 0, 0);
-            final int spanCount = loadGridSize(); // no of columns
-            int spacing = 4; // 4px
-
-            // Create a custom SpanSizeLookup where the first item spans both columns
-            //I wonder why this has to be juxtaposed for it to work
-            getLayoutManager().setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
-                @Override
-                public int getSpanSize(int position) {
-                    if (true) {
-                        return spanCount;
-                    } else {
-                        return 1;
-                    }
-                }
-            });
-
-            indexLayoutManager.attach(getRecyclerView(), getActivity());
-            optRoundCardView.setCardBackgroundColor(ATHUtil.resolveColor(getActivity(), R.attr.cardBackgroundColor));
-        }else {
-            GridSpacingItemDecoration gridSpacingItemDecoration = new GridSpacingItemDecoration(loadGridSize(), 4, false);
-            getRecyclerView().addItemDecoration(gridSpacingItemDecoration);
-        }
-    }
-
-    @Override
-    protected int getItemLayoutRes() {
-        if(!Util.isTablet(getResources())){
-            return R.layout.item_sectioned_album;
-        }else {
-            return super.getItemLayoutRes();
-        }
-    }
-
-    @LayoutRes
-    protected int getLayoutRes() {
-        super.getLayoutRes();
-
-
-        if (!Util.isTablet(getResources())) {
-            return R.layout.fragment_albums_rv;
-        } else {
-            return super.getLayoutRes();
-        }
     }
 
     private static class AsyncAlbumLoader extends WrappedAsyncTaskLoader<ArrayList<Album>> {

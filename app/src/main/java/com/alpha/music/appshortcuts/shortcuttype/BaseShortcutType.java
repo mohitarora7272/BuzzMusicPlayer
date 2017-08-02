@@ -15,7 +15,7 @@ import com.alpha.music.appshortcuts.AppShortcutLauncherActivity;
 @TargetApi(Build.VERSION_CODES.N_MR1)
 public abstract class BaseShortcutType {
 
-    static final String ID_PREFIX = "com.kabouzeid.gramophone.appshortcuts.id.";
+    static final String ID_PREFIX = "com.alpha.music.appshortcuts.id.";
 
     Context context;
 

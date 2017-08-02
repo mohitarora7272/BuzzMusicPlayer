@@ -65,7 +65,7 @@
                 android:padding="8dp">
 
                 <android.support.v7.widget.AppCompatButton
-                    android:id="@+id/aidan_follestad_google_plus"
+                    android:id="@+id/my_follestad_google_plus"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -73,7 +73,7 @@
                     android:textColor="#dd4b39" />
 
                 <android.support.v7.widget.AppCompatButton
-                    android:id="@+id/aidan_follestad_git_hub"
+                    android:id="@+id/my_follestad_git_hub"
                     style="@style/Widget.AppCompat.Button.Borderless"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

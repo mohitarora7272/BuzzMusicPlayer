@@ -12,8 +12,8 @@ import com.alpha.music.glide.palette.BitmapPaletteTarget;
 /**
  * @author Mohit Arora
  */
-public abstract class PhonographColoredTarget extends BitmapPaletteTarget {
-    public PhonographColoredTarget(ImageView view) {
+public abstract class AlphaMusicColoredTarget extends BitmapPaletteTarget {
+    public AlphaMusicColoredTarget(ImageView view) {
         super(view);
     }
 

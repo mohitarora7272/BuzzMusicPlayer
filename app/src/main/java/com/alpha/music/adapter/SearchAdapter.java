@@ -88,7 +88,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.ViewHolder
                 Glide.with(activity)
                         .load(new ArtistImage(artist.getName(), false))
                         .diskCacheStrategy(DiskCacheStrategy.SOURCE)
-                        .placeholder(R.drawable.default_artist_image)
+                        .placeholder(R.drawable.default_album_art)
                         .animate(android.R.anim.fade_in)
                         .priority(Priority.LOW)
                         .signature(ArtistSignatureUtil.getInstance(activity).getArtistSignature(artist.getName()))

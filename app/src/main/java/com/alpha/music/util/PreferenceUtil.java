@@ -102,12 +102,12 @@ public final class PreferenceUtil {
     public static int getThemeResFromPrefValue(String themePrefValue) {
         switch (themePrefValue) {
             case "dark":
-                return R.style.Theme_Phonograph;
+                return R.style.Theme_AlphaMusic;
             case "black":
-                return R.style.Theme_Phonograph_Black;
+                return R.style.Theme_AlphaMusic_Black;
             case "light":
             default:
-                return R.style.Theme_Phonograph_Light;
+                return R.style.Theme_AlphaMusic_Light;
         }
     }
 
