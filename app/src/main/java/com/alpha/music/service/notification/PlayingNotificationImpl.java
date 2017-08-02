@@ -25,7 +25,7 @@ import com.alpha.music.glide.palette.BitmapPaletteWrapper;
 import com.alpha.music.model.Song;
 import com.alpha.music.service.MusicService;
 import com.alpha.music.ui.activities.MainActivity;
-import com.alpha.music.util.PhonographColorUtil;
+import com.alpha.music.util.AlphaMusicColorUtil;
 import com.alpha.music.util.PreferenceUtil;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.animation.GlideAnimation;
@@ -106,7 +106,7 @@ public class PlayingNotificationImpl implements PlayingNotification {
                         .into(new SimpleTarget<BitmapPaletteWrapper>(bigNotificationImageSize, bigNotificationImageSize) {
                             @Override
                             public void onResourceReady(BitmapPaletteWrapper resource, GlideAnimation<? super BitmapPaletteWrapper> glideAnimation) {
-                                update(resource.getBitmap(), PhonographColorUtil.getColor(resource.getPalette(), Color.TRANSPARENT));
+                                update(resource.getBitmap(), AlphaMusicColorUtil.getColor(resource.getPalette(), Color.TRANSPARENT));
                             }
 
                             @Override

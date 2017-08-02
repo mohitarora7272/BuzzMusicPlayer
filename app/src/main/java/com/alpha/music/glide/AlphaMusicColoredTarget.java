@@ -4,7 +4,7 @@ import android.graphics.drawable.Drawable;
 import android.widget.ImageView;
 
 import com.alpha.music.glide.palette.BitmapPaletteWrapper;
-import com.alpha.music.util.PhonographColorUtil;
+import com.alpha.music.util.AlphaMusicColorUtil;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.kabouzeid.appthemehelper.util.ATHUtil;
 import com.alpha.music.R;
@@ -26,7 +26,7 @@ public abstract class AlphaMusicColoredTarget extends BitmapPaletteTarget {
     @Override
     public void onResourceReady(BitmapPaletteWrapper resource, GlideAnimation<? super BitmapPaletteWrapper> glideAnimation) {
         super.onResourceReady(resource, glideAnimation);
-        onColorReady(PhonographColorUtil.getColor(resource.getPalette(), getDefaultFooterColor()));
+        onColorReady(AlphaMusicColorUtil.getColor(resource.getPalette(), getDefaultFooterColor()));
     }
 
     protected int getDefaultFooterColor() {

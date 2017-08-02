@@ -1,5 +1,6 @@
 package com.alpha.music.util;
 
+import android.annotation.SuppressLint;
 import android.content.ContentResolver;
 import android.content.ContentUris;
 import android.content.ContentValues;
@@ -114,6 +115,7 @@ public class MusicUtil {
         return albumYear + "\n" + songCount + " " + songString;
     }
 
+    @SuppressLint("DefaultLocale")
     public static String getReadableDurationString(long songDurationMillis) {
         long minutes = (songDurationMillis / 1000) / 60;
         long seconds = (songDurationMillis / 1000) % 60;

@@ -29,7 +29,7 @@ import com.alpha.music.glide.SongGlideRequest;
 import com.alpha.music.helper.MusicPlayerRemote;
 import com.alpha.music.model.Album;
 import com.alpha.music.util.NavigationUtil;
-import com.alpha.music.util.PhonographColorUtil;
+import com.alpha.music.util.AlphaMusicColorUtil;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
@@ -374,7 +374,7 @@ public class AlbumDetailActivity extends AbsSlidingMusicPanelActivity implements
         cab = new MaterialCab(this, R.id.cab_stub)
                 .setMenu(menuRes)
                 .setCloseDrawableRes(R.drawable.ic_close_white_24dp)
-                .setBackgroundColor(PhonographColorUtil.shiftBackgroundColorForLightText(getPaletteColor()))
+                .setBackgroundColor(AlphaMusicColorUtil.shiftBackgroundColorForLightText(getPaletteColor()))
                 .start(new MaterialCab.Callback() {
                     @Override
                     public boolean onCabCreated(MaterialCab materialCab, Menu menu) {

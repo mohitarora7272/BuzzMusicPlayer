@@ -32,7 +32,7 @@ import com.alpha.music.ui.activities.SearchActivity;
 import com.alpha.music.ui.fragments.mainactivity.AbsMainActivityFragment;
 import com.alpha.music.ui.fragments.mainactivity.library.pager.AbsLibraryPagerRecyclerViewCustomGridSizeFragment;
 import com.alpha.music.util.NavigationUtil;
-import com.alpha.music.util.PhonographColorUtil;
+import com.alpha.music.util.AlphaMusicColorUtil;
 import com.alpha.music.util.PreferenceUtil;
 import com.alpha.music.util.Util;
 import com.kabouzeid.appthemehelper.ThemeStore;
@@ -141,7 +141,7 @@ public class LibraryFragment extends AbsMainActivityFragment implements CabHolde
         cab = new MaterialCab(getMainActivity(), R.id.cab_stub)
                 .setMenu(menuRes)
                 .setCloseDrawableRes(R.drawable.ic_close_white_24dp)
-                .setBackgroundColor(PhonographColorUtil.shiftBackgroundColorForLightText(ThemeStore.primaryColor(getActivity())))
+                .setBackgroundColor(AlphaMusicColorUtil.shiftBackgroundColorForLightText(ThemeStore.primaryColor(getActivity())))
                 .start(callback);
         return cab;
     }

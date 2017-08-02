@@ -34,7 +34,7 @@ import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
 /**
- * @author Karim Abou Zeid (kabouzeid)
+ * @author Mohit Arora
  */
 public class FlatPlayerPlaybackControlsFragment extends AbsMusicServiceFragment implements MusicProgressViewUpdateHelper.Callback {
 

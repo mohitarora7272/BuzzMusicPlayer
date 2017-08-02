@@ -28,7 +28,7 @@ import butterknife.Unbinder;
 import me.zhanghai.android.materialprogressbar.MaterialProgressBar;
 
 /**
- * @author Karim Abou Zeid (kabouzeid)
+ * @author Mohit Arora
  */
 public class MiniPlayerFragment extends AbsMusicServiceFragment implements MusicProgressViewUpdateHelper.Callback {
 
@@ -126,7 +126,7 @@ public class MiniPlayerFragment extends AbsMusicServiceFragment implements Music
 
         GestureDetector flingPlayBackController;
 
-        public FlingPlayBackController(Context context) {
+        FlingPlayBackController(Context context) {
             flingPlayBackController = new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {
                 @Override
                 public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX, float velocityY) {

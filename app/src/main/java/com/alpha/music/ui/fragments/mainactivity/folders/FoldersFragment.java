@@ -37,7 +37,7 @@ import com.alpha.music.helper.menu.SongsMenuHelper;
 import com.alpha.music.interfaces.CabHolder;
 import com.alpha.music.model.Song;
 import com.alpha.music.ui.activities.MainActivity;
-import com.alpha.music.util.PhonographColorUtil;
+import com.alpha.music.util.AlphaMusicColorUtil;
 import com.alpha.music.util.PreferenceUtil;
 import com.kabouzeid.appthemehelper.ThemeStore;
 import com.kabouzeid.appthemehelper.common.ATHToolbarActivity;
@@ -245,7 +245,7 @@ public class FoldersFragment extends AbsMainActivityFragment implements MainActi
         cab = new MaterialCab(getMainActivity(), R.id.cab_stub)
                 .setMenu(menuRes)
                 .setCloseDrawableRes(R.drawable.ic_close_white_24dp)
-                .setBackgroundColor(PhonographColorUtil.shiftBackgroundColorForLightText(ThemeStore.primaryColor(getActivity())))
+                .setBackgroundColor(AlphaMusicColorUtil.shiftBackgroundColorForLightText(ThemeStore.primaryColor(getActivity())))
                 .start(callback);
         return cab;
     }

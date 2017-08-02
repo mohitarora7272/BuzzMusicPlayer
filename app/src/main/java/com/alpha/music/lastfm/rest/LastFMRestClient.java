@@ -1,5 +1,6 @@
 package com.alpha.music.lastfm.rest;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -57,7 +58,7 @@ public class LastFMRestClient {
         return new Interceptor() {
             @Override
             public Response intercept(Chain chain) throws IOException {
-                Request modifiedRequest = chain.request().newBuilder()
+                @SuppressLint("DefaultLocale") Request modifiedRequest = chain.request().newBuilder()
                         .addHeader("Cache-Control", String.format("max-age=%d, max-stale=%d", 31536000, 31536000))
                         .build();
                 return chain.proceed(modifiedRequest);

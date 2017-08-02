@@ -25,7 +25,9 @@ import com.alpha.music.model.Song;
 import com.alpha.music.service.MusicService;
 import com.alpha.music.ui.activities.MainActivity;
 import com.alpha.music.util.Util;
-
+/**
+ * @author Mohit Arora
+ */
 public class AppWidgetCard extends BaseAppWidget {
     public static final String NAME = "app_widget_card";
 

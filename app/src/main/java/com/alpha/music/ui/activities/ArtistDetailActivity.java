@@ -47,7 +47,7 @@ import com.alpha.music.model.Song;
 import com.alpha.music.ui.activities.base.AbsSlidingMusicPanelActivity;
 import com.alpha.music.util.ArtistSignatureUtil;
 import com.alpha.music.util.NavigationUtil;
-import com.alpha.music.util.PhonographColorUtil;
+import com.alpha.music.util.AlphaMusicColorUtil;
 import com.alpha.music.util.PreferenceUtil;
 import com.alpha.music.util.Util;
 import com.bumptech.glide.Glide;
@@ -406,7 +406,7 @@ public class ArtistDetailActivity extends AbsSlidingMusicPanelActivity implement
         cab = new MaterialCab(this, R.id.cab_stub)
                 .setMenu(menuRes)
                 .setCloseDrawableRes(R.drawable.ic_close_white_24dp)
-                .setBackgroundColor(PhonographColorUtil.shiftBackgroundColorForLightText(getPaletteColor()))
+                .setBackgroundColor(AlphaMusicColorUtil.shiftBackgroundColorForLightText(getPaletteColor()))
                 .start(new MaterialCab.Callback() {
                     @Override
                     public boolean onCabCreated(MaterialCab materialCab, Menu menu) {

@@ -23,7 +23,7 @@ import com.alpha.music.model.Playlist;
 import com.alpha.music.model.Song;
 import com.alpha.music.ui.activities.base.AbsSlidingMusicPanelActivity;
 import com.alpha.music.util.NavigationUtil;
-import com.alpha.music.util.PhonographColorUtil;
+import com.alpha.music.util.AlphaMusicColorUtil;
 import com.h6ah4i.android.widget.advrecyclerview.animator.GeneralItemAnimator;
 import com.h6ah4i.android.widget.advrecyclerview.animator.RefactoredDefaultItemAnimator;
 import com.h6ah4i.android.widget.advrecyclerview.draggable.RecyclerViewDragDropManager;
@@ -173,7 +173,7 @@ public class PlaylistDetailActivity extends AbsSlidingMusicPanelActivity impleme
         cab = new MaterialCab(this, R.id.cab_stub)
                 .setMenu(menu)
                 .setCloseDrawableRes(R.drawable.ic_close_white_24dp)
-                .setBackgroundColor(PhonographColorUtil.shiftBackgroundColorForLightText(ThemeStore.primaryColor(this)))
+                .setBackgroundColor(AlphaMusicColorUtil.shiftBackgroundColorForLightText(ThemeStore.primaryColor(this)))
                 .start(callback);
         return cab;
     }

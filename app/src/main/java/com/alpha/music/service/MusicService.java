@@ -1,5 +1,6 @@
 package com.alpha.music.service;
 
+import android.annotation.SuppressLint;
 import android.app.PendingIntent;
 import android.app.Service;
 import android.appwidget.AppWidgetManager;
@@ -73,31 +74,31 @@ import java.util.Random;
 public class MusicService extends Service implements SharedPreferences.OnSharedPreferenceChangeListener, Playback.PlaybackCallbacks {
     public static final String TAG = MusicService.class.getSimpleName();
 
-    public static final String PHONOGRAPH_PACKAGE_NAME = "com.alpha.music" + ".temp_sticky_intent_fix"; // TODO remove ".temp_sticky_intent_fix" in a future update.
+    public static final String ALPHAMUSIC_PACKAGE_NAME = "com.alpha.music" + ".temp_sticky_intent_fix"; // TODO remove ".temp_sticky_intent_fix" in a future update.
     public static final String MUSIC_PACKAGE_NAME = "com.android.music";
 
-    public static final String ACTION_TOGGLE_PAUSE = PHONOGRAPH_PACKAGE_NAME + ".togglepause";
-    public static final String ACTION_PLAY = PHONOGRAPH_PACKAGE_NAME + ".play";
-    public static final String ACTION_PLAY_PLAYLIST = PHONOGRAPH_PACKAGE_NAME + ".play.playlist";
-    public static final String ACTION_PAUSE = PHONOGRAPH_PACKAGE_NAME + ".pause";
-    public static final String ACTION_STOP = PHONOGRAPH_PACKAGE_NAME + ".stop";
-    public static final String ACTION_SKIP = PHONOGRAPH_PACKAGE_NAME + ".skip";
-    public static final String ACTION_REWIND = PHONOGRAPH_PACKAGE_NAME + ".rewind";
-    public static final String ACTION_QUIT = PHONOGRAPH_PACKAGE_NAME + ".quitservice";
-    public static final String INTENT_EXTRA_PLAYLIST = PHONOGRAPH_PACKAGE_NAME + "intentextra.playlist";
-    public static final String INTENT_EXTRA_SHUFFLE_MODE = PHONOGRAPH_PACKAGE_NAME + ".intentextra.shufflemode";
+    public static final String ACTION_TOGGLE_PAUSE = ALPHAMUSIC_PACKAGE_NAME + ".togglepause";
+    public static final String ACTION_PLAY = ALPHAMUSIC_PACKAGE_NAME + ".play";
+    public static final String ACTION_PLAY_PLAYLIST = ALPHAMUSIC_PACKAGE_NAME + ".play.playlist";
+    public static final String ACTION_PAUSE = ALPHAMUSIC_PACKAGE_NAME + ".pause";
+    public static final String ACTION_STOP = ALPHAMUSIC_PACKAGE_NAME + ".stop";
+    public static final String ACTION_SKIP = ALPHAMUSIC_PACKAGE_NAME + ".skip";
+    public static final String ACTION_REWIND = ALPHAMUSIC_PACKAGE_NAME + ".rewind";
+    public static final String ACTION_QUIT = ALPHAMUSIC_PACKAGE_NAME + ".quitservice";
+    public static final String INTENT_EXTRA_PLAYLIST = ALPHAMUSIC_PACKAGE_NAME + "intentextra.playlist";
+    public static final String INTENT_EXTRA_SHUFFLE_MODE = ALPHAMUSIC_PACKAGE_NAME + ".intentextra.shufflemode";
 
-    public static final String APP_WIDGET_UPDATE = PHONOGRAPH_PACKAGE_NAME + ".appwidgetupdate";
-    public static final String EXTRA_APP_WIDGET_NAME = PHONOGRAPH_PACKAGE_NAME + "app_widget_name";
+    public static final String APP_WIDGET_UPDATE = ALPHAMUSIC_PACKAGE_NAME + ".appwidgetupdate";
+    public static final String EXTRA_APP_WIDGET_NAME = ALPHAMUSIC_PACKAGE_NAME + "app_widget_name";
 
     // do not change these three strings as it will break support with other apps (e.g. last.fm scrobbling)
-    public static final String META_CHANGED = PHONOGRAPH_PACKAGE_NAME + ".metachanged";
-    public static final String QUEUE_CHANGED = PHONOGRAPH_PACKAGE_NAME + ".queuechanged";
-    public static final String PLAY_STATE_CHANGED = PHONOGRAPH_PACKAGE_NAME + ".playstatechanged";
+    public static final String META_CHANGED = ALPHAMUSIC_PACKAGE_NAME + ".metachanged";
+    public static final String QUEUE_CHANGED = ALPHAMUSIC_PACKAGE_NAME + ".queuechanged";
+    public static final String PLAY_STATE_CHANGED = ALPHAMUSIC_PACKAGE_NAME + ".playstatechanged";
 
-    public static final String REPEAT_MODE_CHANGED = PHONOGRAPH_PACKAGE_NAME + ".repeatmodechanged";
-    public static final String SHUFFLE_MODE_CHANGED = PHONOGRAPH_PACKAGE_NAME + ".shufflemodechanged";
-    public static final String MEDIA_STORE_CHANGED = PHONOGRAPH_PACKAGE_NAME + ".mediastorechanged";
+    public static final String REPEAT_MODE_CHANGED = ALPHAMUSIC_PACKAGE_NAME + ".repeatmodechanged";
+    public static final String SHUFFLE_MODE_CHANGED = ALPHAMUSIC_PACKAGE_NAME + ".shufflemodechanged";
+    public static final String MEDIA_STORE_CHANGED = ALPHAMUSIC_PACKAGE_NAME + ".mediastorechanged";
 
     public static final String SAVED_POSITION = "POSITION";
     public static final String SAVED_POSITION_IN_TRACK = "POSITION_IN_TRACK";
@@ -218,7 +219,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
 
         mediaSession.setActive(true);
 
-        sendBroadcast(new Intent("com.alpha.music.PHONOGRAPH_MUSIC_SERVICE_CREATED"));
+        sendBroadcast(new Intent("com.alpha.music.ALPHAMUSIC_MUSIC_SERVICE_CREATED"));
     }
 
     private AudioManager getAudioManager() {
@@ -228,6 +229,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
         return audioManager;
     }
 
+    @SuppressLint("InlinedApi")
     private void setupMediaSession() {
         ComponentName mediaButtonReceiverComponentName = new ComponentName(getApplicationContext(), MediaButtonIntentReceiver.class);
 
@@ -236,7 +238,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
 
         PendingIntent mediaButtonReceiverPendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 0, mediaButtonIntent, 0);
 
-        mediaSession = new MediaSessionCompat(this, "Phonograph", mediaButtonReceiverComponentName, mediaButtonReceiverPendingIntent);
+        mediaSession = new MediaSessionCompat(this, "AlphaMusic", mediaButtonReceiverComponentName, mediaButtonReceiverPendingIntent);
         mediaSession.setCallback(new MediaSessionCompat.Callback() {
             @Override
             public void onPlay() {
@@ -359,7 +361,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
         PreferenceUtil.getInstance(this).unregisterOnSharedPreferenceChangedListener(this);
         wakeLock.release();
 
-        sendBroadcast(new Intent("com.alpha.music.PHONOGRAPH_MUSIC_SERVICE_DESTROYED"));
+        sendBroadcast(new Intent("com.alpha.music.ALPHAMUSIC_MUSIC_SERVICE_DESTROYED"));
     }
 
     @Override
@@ -1032,7 +1034,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
 
     // to let other apps know whats playing. i.E. last.fm (scrobbling) or musixmatch
     private void sendPublicIntent(@NonNull final String what) {
-        final Intent intent = new Intent(what.replace(PHONOGRAPH_PACKAGE_NAME, MUSIC_PACKAGE_NAME));
+        final Intent intent = new Intent(what.replace(ALPHAMUSIC_PACKAGE_NAME, MUSIC_PACKAGE_NAME));
 
         final Song song = getCurrentSong();
 
@@ -1047,7 +1049,7 @@ public class MusicService extends Service implements SharedPreferences.OnSharedP
 
         intent.putExtra("playing", isPlaying());
 
-        intent.putExtra("scrobbling_source", PHONOGRAPH_PACKAGE_NAME);
+        intent.putExtra("scrobbling_source", ALPHAMUSIC_PACKAGE_NAME);
 
         sendStickyBroadcast(intent);
     }

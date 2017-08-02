@@ -14,7 +14,7 @@ import java.util.Comparator;
 /**
  * @author Mohit Arora
  */
-public class PhonographColorUtil {
+public class AlphaMusicColorUtil {
 
     @Nullable
     public static Palette generatePalette(Bitmap bitmap) {

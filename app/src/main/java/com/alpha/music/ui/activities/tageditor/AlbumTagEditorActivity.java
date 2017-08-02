@@ -18,7 +18,7 @@ import com.alpha.music.lastfm.rest.model.LastFmAlbum;
 import com.alpha.music.loader.AlbumLoader;
 import com.alpha.music.model.Song;
 import com.alpha.music.util.LastFMUtil;
-import com.alpha.music.util.PhonographColorUtil;
+import com.alpha.music.util.AlphaMusicColorUtil;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.request.animation.GlideAnimation;
@@ -90,7 +90,7 @@ public class AlbumTagEditorActivity extends AbsTagEditorActivity implements Text
     @Override
     protected void loadCurrentImage() {
         Bitmap bitmap = getAlbumArt();
-        setImageBitmap(bitmap, PhonographColorUtil.getColor(PhonographColorUtil.generatePalette(bitmap), ATHUtil.resolveColor(this, R.attr.defaultFooterColor)));
+        setImageBitmap(bitmap, AlphaMusicColorUtil.getColor(AlphaMusicColorUtil.generatePalette(bitmap), ATHUtil.resolveColor(this, R.attr.defaultFooterColor)));
         deleteAlbumArt = false;
     }
 
@@ -126,7 +126,7 @@ public class AlbumTagEditorActivity extends AbsTagEditorActivity implements Text
                                     @Override
                                     public void onResourceReady(BitmapPaletteWrapper resource, GlideAnimation<? super BitmapPaletteWrapper> glideAnimation) {
                                         albumArtBitmap = getResizedAlbumCover(resource.getBitmap(), 2048);
-                                        setImageBitmap(albumArtBitmap, PhonographColorUtil.getColor(resource.getPalette(), ATHUtil.resolveColor(AlbumTagEditorActivity.this, R.attr.defaultFooterColor)));
+                                        setImageBitmap(albumArtBitmap, AlphaMusicColorUtil.getColor(resource.getPalette(), ATHUtil.resolveColor(AlbumTagEditorActivity.this, R.attr.defaultFooterColor)));
                                         deleteAlbumArt = false;
                                         dataChanged();
                                         setResult(RESULT_OK);
@@ -209,9 +209,9 @@ public class AlbumTagEditorActivity extends AbsTagEditorActivity implements Text
 
                     @Override
                     public void onResourceReady(BitmapPaletteWrapper resource, GlideAnimation<? super BitmapPaletteWrapper> glideAnimation) {
-                        PhonographColorUtil.getColor(resource.getPalette(), Color.TRANSPARENT);
+                        AlphaMusicColorUtil.getColor(resource.getPalette(), Color.TRANSPARENT);
                         albumArtBitmap = getResizedAlbumCover(resource.getBitmap(), 2048);
-                        setImageBitmap(albumArtBitmap, PhonographColorUtil.getColor(resource.getPalette(), ATHUtil.resolveColor(AlbumTagEditorActivity.this, R.attr.defaultFooterColor)));
+                        setImageBitmap(albumArtBitmap, AlphaMusicColorUtil.getColor(resource.getPalette(), ATHUtil.resolveColor(AlbumTagEditorActivity.this, R.attr.defaultFooterColor)));
                         deleteAlbumArt = false;
                         dataChanged();
                         setResult(RESULT_OK);
