@@ -202,7 +202,7 @@ public class MainActivity extends AbsSlidingMusicPanelActivity {
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {
-                                startActivity(new Intent(MainActivity.this, AboutActivity.class));
+
                             }
                         }, 200);
                         break;

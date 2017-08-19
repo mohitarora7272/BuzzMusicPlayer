@@ -69,7 +69,7 @@
                 <data android:mimeType="application/x-ogg" />
                 <data android:mimeType="application/itunes" />
             </intent-filter>
-            <intent-filter>
+            <intent-filter tools:ignore="GoogleAppIndexingWarning">
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
@@ -105,9 +105,6 @@
         <activity
             android:name="com.alpha.music.ui.activities.SettingsActivity"
             android:label="@string/action_settings" />
-        <activity
-            android:name="com.alpha.music.ui.activities.AboutActivity"
-            android:label="@string/action_about" />
         <activity
             android:name="com.alpha.music.ui.activities.intro.AppIntroActivity"
             android:label="@string/intro_label"

@@ -10,14 +10,17 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.alpha.music.glide.SongGlideRequest;
 import com.alpha.music.helper.MusicPlayerRemote;
 import com.alpha.music.helper.MusicProgressViewUpdateHelper;
 import com.alpha.music.helper.PlayPauseButtonOnClickHandler;
 import com.alpha.music.ui.fragments.AbsMusicServiceFragment;
 import com.alpha.music.views.PlayPauseDrawable;
+import com.bumptech.glide.Glide;
 import com.kabouzeid.appthemehelper.ThemeStore;
 import com.kabouzeid.appthemehelper.util.ATHUtil;
 import com.alpha.music.R;
@@ -40,6 +43,12 @@ public class MiniPlayerFragment extends AbsMusicServiceFragment implements Music
     ImageView miniPlayerPlayPauseButton;
     @BindView(R.id.progress_bar)
     MaterialProgressBar progressBar;
+    @BindView(R.id.image)
+    ImageView image;
+    @BindView(R.id.player_prev_button)
+    ImageButton prevButton;
+    @BindView(R.id.player_next_button)
+    ImageButton nextButton;
 
     private PlayPauseDrawable miniPlayerPlayPauseDrawable;
 
@@ -64,6 +73,7 @@ public class MiniPlayerFragment extends AbsMusicServiceFragment implements Music
 
         view.setOnTouchListener(new FlingPlayBackController(getActivity()));
         setUpMiniPlayer();
+        setUpPrevNext();
     }
 
     @Override
@@ -75,6 +85,27 @@ public class MiniPlayerFragment extends AbsMusicServiceFragment implements Music
     private void setUpMiniPlayer() {
         setUpPlayPauseButton();
         progressBar.setProgressTintList(ColorStateList.valueOf(ThemeStore.accentColor(getActivity())));
+    }
+
+    private void setUpPrevNext() {
+        updatePrevNextColor();
+        nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MusicPlayerRemote.playNextSong();
+            }
+        });
+        prevButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MusicPlayerRemote.back();
+            }
+        });
+    }
+
+    private void updatePrevNextColor() {
+        nextButton.setColorFilter(ATHUtil.resolveColor(getActivity(), R.attr.iconColor, ThemeStore.textColorSecondary(getActivity())), PorterDuff.Mode.SRC_IN);
+        prevButton.setColorFilter(ATHUtil.resolveColor(getActivity(), R.attr.iconColor, ThemeStore.textColorSecondary(getActivity())), PorterDuff.Mode.SRC_IN);
     }
 
     private void setUpPlayPauseButton() {
@@ -91,12 +122,21 @@ public class MiniPlayerFragment extends AbsMusicServiceFragment implements Music
     @Override
     public void onServiceConnected() {
         updateSongTitle();
+        loadAlbumCover();
         updatePlayPauseDrawableState(false);
+    }
+
+    private void loadAlbumCover() {
+        if (image == null) return;
+        SongGlideRequest.Builder.from(Glide.with(getActivity()), MusicPlayerRemote.getCurrentSong())
+                .checkIgnoreMediaStore(getActivity())
+                .build().into(image);
     }
 
     @Override
     public void onPlayingMetaChanged() {
         updateSongTitle();
+        loadAlbumCover();
     }
 
     @Override
