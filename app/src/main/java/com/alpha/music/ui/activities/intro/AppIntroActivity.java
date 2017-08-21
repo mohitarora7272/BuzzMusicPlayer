@@ -23,7 +23,7 @@ public class AppIntroActivity extends IntroActivity {
 
         addSlide(new SimpleSlide.Builder()
                 .title(R.string.app_name)
-                .description(R.string.welcome_to_Ọrin)
+                .description(R.string.welcome_to_AlphaMusic)
                 .image(R.drawable.ic_launcher)
                 .background(R.color.md_red_500)
                 .backgroundDark(R.color.md_red_600)

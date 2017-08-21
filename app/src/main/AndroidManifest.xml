@@ -110,9 +110,6 @@
             android:label="@string/intro_label"
             android:theme="@style/Theme.Intro" />
         <activity
-            android:name="com.alpha.music.ui.activities.bugreport.BugReportActivity"
-            android:label="@string/report_an_issue" />
-        <activity
             android:name="com.alpha.music.appshortcuts.AppShortcutLauncherActivity"
             android:launchMode="singleInstance"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
