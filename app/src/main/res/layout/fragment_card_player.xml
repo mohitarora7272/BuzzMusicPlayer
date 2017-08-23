@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <!--The unused FrameLayout layout is necessary to prevent a crash on rotate-->
 
-    <com.sothree.slidinguppanel.SlidingUpPanelLayout
-        xmlns:sothree="http://schemas.android.com/apk/res-auto"
+    <com.sothree.slidinguppanel.SlidingUpPanelLayout xmlns:sothree="http://schemas.android.com/apk/res-auto"
         android:id="@+id/player_sliding_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -27,34 +27,38 @@
             <View
                 android:id="@+id/color_background"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:visibility="visible" />
 
             <RelativeLayout
                 android:id="@+id/player_content"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                tools:ignore="InconsistentLayout">
 
-                <com.alpha.music.views.WidthFitSquareLayout
+                <com.appsboy.buzzmusic.views.WidthFitSquareLayout
                     android:id="@+id/album_cover_container"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true">
+                    android:layout_centerInParent="true"
+                    android:layout_height="match_parent"
+                    tools:ignore="InconsistentLayout">
 
                     <fragment
                         android:id="@+id/player_album_cover_fragment"
-                        class="com.alpha.music.ui.fragments.player.PlayerAlbumCoverFragment"
+                        class="com.appsboy.buzzmusic.ui.fragments.player.PlayerAlbumCoverFragment"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true" />
 
-                </com.alpha.music.views.WidthFitSquareLayout>
+                    <fragment
+                        android:id="@+id/playback_controls_fragment"
+                        class="com.appsboy.buzzmusic.ui.fragments.player.card.CardPlayerPlaybackControlsFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true" />
 
-                <fragment
-                    android:id="@+id/playback_controls_fragment"
-                    class="com.alpha.music.ui.fragments.player.card.CardPlayerPlaybackControlsFragment"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/album_cover_container" />
+                </com.appsboy.buzzmusic.views.WidthFitSquareLayout>
 
             </RelativeLayout>
 
@@ -77,9 +81,6 @@
                 android:id="@+id/playing_queue_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:layout_marginLeft="16dp"
-                android:layout_marginRight="16dp"
                 android:layout_marginTop="@dimen/status_bar_padding"
                 app:cardBackgroundColor="?cardBackgroundColor"
                 app:cardElevation="@dimen/card_elevation"
@@ -106,24 +107,24 @@
 
                         <include
                             android:id="@+id/current_song"
-                            layout="@layout/item_list" />
+                            layout="@layout/item_list"
+                            tools:ignore="InconsistentLayout" />
 
                         <TextView
                             android:id="@+id/player_queue_sub_header"
                             android:layout_width="match_parent"
                             android:layout_height="48dp"
                             android:gravity="center_vertical"
-                            android:paddingLeft="16dp"
-                            android:paddingRight="16dp"
                             android:text="@string/up_next"
+                            android:layout_marginLeft="15dp"
                             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                            android:textColor="?android:textColorSecondary" />
+                            android:textColor="?android:colorPrimaryDark"
+                            tools:ignore="NewApi" />
 
                         <android.support.v7.widget.RecyclerView
                             android:id="@+id/player_recycler_view"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:paddingBottom="8dp"
                             android:requiresFadingEdge="vertical" />
 
                     </LinearLayout>

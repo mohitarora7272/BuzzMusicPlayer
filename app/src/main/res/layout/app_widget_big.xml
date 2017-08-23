@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black">
+    android:background="@android:color/black"
+    tools:ignore="Overdraw">
 
     <ImageView
         android:id="@+id/image"
@@ -21,7 +22,8 @@
         android:background="@drawable/shadow_up_strong"
         android:layoutDirection="ltr"
         android:orientation="horizontal"
-        android:padding="16dp">
+        android:padding="16dp"
+        tools:ignore="UnusedAttribute">
 
         <ImageButton
             android:id="@+id/button_prev"
@@ -80,7 +82,8 @@
             android:singleLine="true"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
             android:textColor="@color/ate_primary_text_dark"
-            tools:text="Title" />
+            tools:text="Title"
+            tools:ignore="Deprecated" />
 
         <TextView
             android:id="@+id/text"
@@ -91,7 +94,8 @@
             android:singleLine="true"
             android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
             android:textColor="@color/ate_secondary_text_dark"
-            tools:text="Text" />
+            tools:text="Text"
+            tools:ignore="Deprecated" />
 
     </LinearLayout>
 

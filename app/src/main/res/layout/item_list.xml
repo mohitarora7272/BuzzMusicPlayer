@@ -1,24 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="@dimen/item_list_height"
     android:foreground="?attr/rectSelector"
     tools:ignore="UnusedAttribute">
-
-    <com.alpha.music.views.IconImageView
-        android:id="@+id/drag_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="center_vertical|start"
-        android:layout_marginLeft="-8dp"
-        android:layout_marginStart="-8dp"
-        android:tint="?attr/iconColor"
-        android:tintMode="src_in"
-        android:visibility="gone"
-        app:srcCompat="@drawable/ic_drag_vertical_white_24dp"
-        tools:ignore="ContentDescription" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -26,16 +12,27 @@
         android:descendantFocusability="blocksDescendants"
         android:orientation="horizontal">
 
+        <com.appsboy.buzzmusic.views.IconImageView
+            android:id="@+id/drag_view"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="8dp"
+            android:background="@drawable/ic_headset_white_24dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            tools:ignore="ContentDescription" />
+
         <FrameLayout
             android:id="@+id/image_container"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:paddingEnd="0dp"
-            android:paddingLeft="16dp"
+            android:paddingLeft="10dp"
             android:paddingRight="0dp"
-            android:paddingStart="16dp">
+            android:paddingStart="10dp">
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/image"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
@@ -52,7 +49,8 @@
                 android:minHeight="40dp"
                 android:singleLine="true"
                 android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:ignore="Deprecated" />
 
         </FrameLayout>
 
@@ -73,7 +71,8 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif"
                 android:singleLine="true"
-                android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                tools:ignore="Deprecated" />
 
             <TextView
                 android:id="@+id/text"
@@ -82,13 +81,19 @@
                 android:fontFamily="sans-serif"
                 android:singleLine="true"
                 android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                android:textColor="?android:textColorSecondary" />
+                android:textColor="?android:textColorSecondary"
+                tools:ignore="Deprecated" />
         </LinearLayout>
 
-        <com.alpha.music.views.IconImageView
+        <com.appsboy.buzzmusic.views.IconImageView
             android:id="@+id/menu"
-            style="@style/OverFlowButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:layout_gravity="center_vertical"
+            android:layout_margin="8dp"
+            android:background="@drawable/ic_more_vert_white_24dp"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
             tools:ignore="ContentDescription" />
 
     </LinearLayout>

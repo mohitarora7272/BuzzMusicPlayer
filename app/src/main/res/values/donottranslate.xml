@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">Alpha Music Player</string>
+    <string name="app_name" translatable="false">Buzz Music Player</string>
 
     <string name="card">Card</string>
     <string name="flat">Flat</string>
 
-    <string name="id_shortcuttype">com.alpha.music.appshortcuts.ShortcutType</string>
 </resources>

@@ -6,7 +6,8 @@
     android:background="#AA000000"
     android:columnCount="2"
     android:gravity="top"
-    android:rowCount="3">
+    android:rowCount="3"
+    tools:ignore="Overdraw">
 
     <ImageView
         android:id="@+id/image"
@@ -21,7 +22,8 @@
         android:focusable="true"
         android:gravity="center_horizontal"
         android:layoutDirection="ltr"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        tools:ignore="UnusedAttribute">
 
         <ImageButton
             android:id="@+id/button_prev"
@@ -62,7 +64,7 @@
         android:layout_columnSpan="2"
         android:layout_gravity="fill_horizontal"
         android:background="@color/md_divider_white"
-        tools:ignore="Orientation" />
+        tools:ignore="Orientation,PrivateResource" />
 
     <LinearLayout
         android:id="@+id/media_titles"
@@ -82,7 +84,8 @@
             android:singleLine="true"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"
             android:textColor="@color/ate_primary_text_dark"
-            tools:text="Title" />
+            tools:text="Title"
+            tools:ignore="Deprecated" />
 
         <TextView
             android:id="@+id/text_separator"
@@ -94,7 +97,7 @@
             android:singleLine="true"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/ate_secondary_text_dark"
-            tools:ignore="HardcodedText"
+            tools:ignore="Deprecated,HardcodedText"
             tools:text="•" />
 
         <TextView
@@ -105,7 +108,8 @@
             android:singleLine="true"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/ate_secondary_text_dark"
-            tools:text="Text" />
+            tools:text="Text"
+            tools:ignore="Deprecated" />
 
     </LinearLayout>
 

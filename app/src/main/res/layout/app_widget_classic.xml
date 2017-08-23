@@ -6,7 +6,7 @@
     android:layout_height="@dimen/app_widget_classic_height"
     android:background="#AA000000"
     android:orientation="horizontal"
-    tools:ignore="ContentDescription">
+    tools:ignore="ContentDescription,Overdraw">
 
     <ImageView
         android:id="@+id/image"
@@ -27,7 +27,8 @@
             android:layout_gravity="bottom"
             android:layoutDirection="ltr"
             android:orientation="horizontal"
-            android:padding="8dp">
+            android:padding="8dp"
+            tools:ignore="UnusedAttribute">
 
             <ImageButton
                 android:id="@+id/button_prev"
@@ -76,7 +77,8 @@
                 android:singleLine="true"
                 android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
                 android:textColor="@color/ate_primary_text_dark"
-                tools:text="Title" />
+                tools:text="Title"
+                tools:ignore="Deprecated" />
 
             <TextView
                 android:id="@+id/text"
@@ -87,7 +89,8 @@
                 android:singleLine="true"
                 android:textAppearance="@style/TextAppearance.AppCompat.Caption"
                 android:textColor="@color/ate_secondary_text_dark"
-                tools:text="Text" />
+                tools:text="Text"
+                tools:ignore="Deprecated" />
 
         </LinearLayout>
 

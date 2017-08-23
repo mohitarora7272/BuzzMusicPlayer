@@ -22,6 +22,7 @@
     <item
         android:id="@+id/action_tag_editor"
         android:title="@string/action_tag_editor"
+        android:visible="false"
         app:showAsAction="never" />
 
     <item

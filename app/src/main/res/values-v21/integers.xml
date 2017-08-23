@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <integer name="font_textStyle_medium">0</integer>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <integer name="font_textStyle_medium" tools:ignore="UnusedResources">0</integer>
 </resources>

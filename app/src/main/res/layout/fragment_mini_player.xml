@@ -8,14 +8,15 @@
     android:clickable="true"
     android:focusable="false"
     android:transitionName="@string/transition_mini_player"
-    tools:ignore="UnusedAttribute">
+    tools:ignore="Overdraw,UnusedAttribute">
 
     <LinearLayout
+        android:id="@+id/linearMiniPlayer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal">
 
-        <com.alpha.music.views.IconImageView
+        <com.appsboy.buzzmusic.views.IconImageView
             android:id="@+id/mini_player_image"
             android:layout_width="24dp"
             android:layout_height="24dp"
@@ -26,62 +27,81 @@
             app:srcCompat="@drawable/ic_expand_less_white_24dp"
             tools:ignore="ContentDescription" />
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/image"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="16dp"
-            android:layout_marginStart="16dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginStart="20dp"
             android:scaleType="centerCrop"
             tools:ignore="ContentDescription" />
 
-        <TextView
-            android:id="@+id/mini_player_title"
+        <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginEnd="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginStart="16dp"
             android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:singleLine="true"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/mini_player_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textSize="15sp"
+                tools:ignore="Deprecated" />
+
+            <TextView
+                android:id="@+id/mini_player_albumTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textSize="12sp"
+                tools:ignore="Deprecated" />
+        </LinearLayout>
 
         <ImageButton
             android:id="@+id/player_prev_button"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
             android:layout_gravity="center_vertical"
+            android:background="@drawable/circle_white_bg_buttons"
+            android:padding="10dp"
             android:scaleType="center"
-            android:background="?attr/roundSelector"
             app:srcCompat="@drawable/ic_skip_previous_white_24dp"
             tools:ignore="ContentDescription,MissingPrefix" />
 
-        <com.alpha.music.views.IconImageView
+        <com.appsboy.buzzmusic.views.IconImageView
             android:id="@+id/mini_player_play_pause_button"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="52dp"
+            android:layout_height="52dp"
             android:layout_gravity="center_vertical"
-            android:layout_marginEnd="5dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:layout_marginStart="5dp"
+            android:background="@drawable/circle_white_bg_buttons"
             android:scaleType="center"
             tools:ignore="ContentDescription" />
 
         <ImageButton
             android:id="@+id/player_next_button"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
             android:layout_gravity="center_vertical"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:background="?attr/roundSelector"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/circle_white_bg_buttons"
+            android:padding="10dp"
             android:scaleType="center"
             app:srcCompat="@drawable/ic_skip_next_white_24dp"
             tools:ignore="ContentDescription,MissingPrefix" />
+
     </LinearLayout>
 
     <me.zhanghai.android.materialprogressbar.MaterialProgressBar

@@ -1,20 +1,23 @@
 <android.support.percent.PercentFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/header"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="215dp"
+    android:background="@drawable/side_nav_bar"
     android:clickable="true"
-    android:foreground="?rectSelectorStrong">
+    android:foreground="?rectSelectorStrong"
+    tools:ignore="Overdraw">
 
     <!--suppress AndroidDomInspection -->
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="30dp"
         android:scaleType="centerCrop"
         android:src="@drawable/default_album_art"
         android:transitionName="@string/transition_album_art"
-        app:layout_aspectRatio="178%"
-        app:layout_widthPercent="100%"
         tools:ignore="ContentDescription,UnusedAttribute" />
 
     <View
@@ -33,27 +36,29 @@
 
         <TextView
             android:id="@+id/title"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="80dp"
             android:fontFamily="sans-serif-medium"
             android:singleLine="true"
             android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
             android:textColor="@color/ate_primary_text_dark"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            tools:ignore="Deprecated" />
 
         <TextView
             android:id="@+id/text"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="80dp"
             android:fontFamily="sans-serif"
             android:singleLine="true"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
             android:textColor="@color/ate_secondary_text_dark"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            tools:ignore="Deprecated" />
 
     </LinearLayout>
 

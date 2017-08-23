@@ -80,7 +80,7 @@
         <item name="android:thumb">@drawable/slider_thumb</item>
     </style>
 
-    <style name="TraditionalMusicProgressSliderParent">
+    <style name="TraditionalMusicProgressSliderParent" tools:ignore="UnusedResources">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginLeft">@dimen/seek_bar_margin_left_right</item>

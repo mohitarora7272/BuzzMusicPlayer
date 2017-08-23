@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="IconLocation">
+        <ignore path="src/main/res/drawable/music_waves_bg.png" />
+    </issue>
+    <issue id="UnusedResources">
+        <ignore path="src/main/res/drawable-hdpi/drawer_shadow.9.png" />
+        <ignore path="src/main/res/drawable-hdpi/ic_launcher.png" />
+        <ignore path="src/main/res/drawable-mdpi/drawer_shadow.9.png" />
+        <ignore path="src/main/res/drawable-xhdpi/drawer_shadow.9.png" />
+        <ignore path="src/main/res/drawable-xxhdpi/drawer_shadow.9.png" />
+        <ignore path="src/main/res/drawable-xxxhdpi/icon_web.png" />
+    </issue>
+</lint>

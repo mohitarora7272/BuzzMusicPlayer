@@ -61,7 +61,8 @@
             android:layout_toRightOf="@id/image"
             android:layout_toStartOf="@id/action_quit"
             android:minHeight="@dimen/notification_large_icon_height"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="PrivateResource">
 
             <TextView
                 android:id="@+id/title"
@@ -71,7 +72,8 @@
                 android:ellipsize="marquee"
                 android:fadingEdge="horizontal"
                 android:singleLine="true"
-                android:textAppearance="@style/Theme.AlphaMusic.Notification.Title" />
+                android:textAppearance="@style/Theme.AlphaMusic.Notification.Title"
+                tools:ignore="Deprecated" />
 
             <TextView
                 android:id="@+id/text"
@@ -83,7 +85,8 @@
                 android:ellipsize="marquee"
                 android:fadingEdge="horizontal"
                 android:singleLine="true"
-                android:textAppearance="@style/Theme.AlphaMusic.Notification" />
+                android:textAppearance="@style/Theme.AlphaMusic.Notification"
+                tools:ignore="Deprecated" />
 
             <TextView
                 android:id="@+id/text2"
@@ -94,7 +97,8 @@
                 android:ellipsize="marquee"
                 android:fadingEdge="horizontal"
                 android:singleLine="true"
-                android:textAppearance="@style/Theme.AlphaMusic.Notification" />
+                android:textAppearance="@style/Theme.AlphaMusic.Notification"
+                tools:ignore="Deprecated" />
 
         </LinearLayout>
 

@@ -11,7 +11,8 @@
     android:paddingEnd="4dp"
     android:paddingLeft="12dp"
     android:paddingRight="4dp"
-    android:paddingStart="12dp">
+    android:paddingStart="12dp"
+    tools:ignore="Overdraw">
 
     <TextView
         android:layout_width="wrap_content"

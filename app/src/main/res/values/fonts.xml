@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- bold -->
-    <string name="font_fontFamily_medium" translatable="false">sans-serif</string>
+    <string name="font_fontFamily_medium" translatable="false" tools:ignore="UnusedResources">sans-serif</string>
 
 </resources>

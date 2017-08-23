@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="what_do_you_want_to_share">What do you want to share?</string>
     <string name="currently_listening_to_x_by_x">Currently listening to %1$s by %2$s.</string>
     <string name="the_audio_file">The audio file</string>
-    <string name="do_you_want_to_set_x_as_ringtone">Do you want to set %1$s as your ringtone?</string>
+    <string name="do_you_want_to_set_x_as_ringtone" tools:ignore="UnusedResources">Do you want to set %1$s as your ringtone?</string>
     <string name="x_has_been_set_as_ringtone">Set %1$s as your ringtone.</string>
-    <string name="action_set_as_ringtone">Set as ringtone</string>
+    <string name="action_set_as_ringtone">Set as Ringtone</string>
     <string name="action_share">Share</string>
     <string name="action_settings">"Settings"</string>
     <string name="action_grant">Grant</string>
-    <string name="action_done">Done</string>
-    <string name="action_skip">Skip</string>
+    <string name="action_done" tools:ignore="UnusedResources">Done</string>
+    <string name="action_skip" tools:ignore="UnusedResources">Skip</string>
     <string name="action_about">About</string>
-    <string name="action_show_intro">Show intro</string>
+    <string name="action_show_intro" tools:ignore="UnusedResources">Show intro</string>
     <string name="action_clear_playlist">Clear playlist</string>
-    <string name="action_playing_queue">Playing queue</string>
+    <string name="action_playing_queue" tools:ignore="UnusedResources">Playing queue</string>
     <string name="action_add_to_favorites">Add to favorites</string>
     <string name="action_remove_from_favorites">Remove from favorites</string>
     <string name="action_search">Search</string>
-    <string name="action_play_next">Play next</string>
+    <string name="action_play_next">Play Next</string>
     <string name="action_play">Play</string>
     <string name="action_play_pause">Play/Pause</string>
     <string name="action_previous">Previous</string>
     <string name="action_next">Next</string>
     <string name="action_add_to_playing_queue">Add to playing queue</string>
-    <string name="action_remove_from_playing_queue">Remove from playing queue</string>
+    <string name="action_remove_from_playing_queue">Remove From Playing Queue</string>
     <string name="action_add_to_playlist">Add to playlist…</string>
-    <string name="action_tag_editor">Tag editor</string>
+    <string name="action_tag_editor">Tag Editor</string>
     <string name="action_delete_from_device">Delete from device</string>
     <string name="action_details">Details</string>
     <string name="action_rename">Rename</string>
@@ -48,7 +48,7 @@
     <string name="genre">Genre</string>
     <string name="album_artist">Album artist</string>
     <string name="year">Year</string>
-    <string name="track">Track</string>
+    <string name="track" tools:ignore="UnusedResources">Track</string>
     <string name="track_hint">"Track (2 for track 2 or 3004 for CD3 track 4)"</string>
     <string name="lyrics">Lyrics</string>
     <string name="album_or_artist_empty">The title or artist is empty.</string>
@@ -62,24 +62,24 @@
     <string name="label_track_length">Length</string>
     <string name="label_bit_rate">Bitrate</string>
     <string name="label_sampling_rate">Sampling rate</string>
-    <string name="action_go_to_artist">Go to artist</string>
-    <string name="action_go_to_album">Go to album</string>
-    <string name="label_playing_queue">Playing queue</string>
-    <string name="save_as_playlist">Save as playlist</string>
+    <string name="action_go_to_artist">Go to Artist</string>
+    <string name="action_go_to_album">Go to Album</string>
+    <string name="label_playing_queue" tools:ignore="UnusedResources">Playing Queue</string>
+    <string name="save_as_playlist" tools:ignore="UnusedResources">Save as Playlist</string>
     <string name="no_results">No results</string>
     <string name="action_re_download_artist_image">Update artist image</string>
     <string name="updated_artist_image">Artist image updated.</string>
-    <string name="could_not_update_artist_image">Couldn\u2019t update artist image.</string>
+    <string name="could_not_update_artist_image" tools:ignore="UnusedResources">Couldn\u2019t update artist image.</string>
     <string name="updating">Updating…</string>
     <string name="added_title_to_playing_queue">"Added 1 title to the playing queue."</string>
-    <string name="added_x_titles_to_playing_queue">Added %1$d titles to the playing queue.</string>
+    <string name="added_x_titles_to_playing_queue" tools:ignore="PluralsCandidate">Added %1$d titles to the playing queue.</string>
     <string name="action_remove_from_playlist">Remove from playlist</string>
-    <string name="action_grid_size">Grid size</string>
-    <string name="action_grid_size_land">Grid size (land)</string>
-    <string name="inserted_x_songs_into_playlist_x">Inserted %1$d songs into the playlist %2$s.</string>
+    <string name="action_grid_size">Grid Size</string>
+    <string name="action_grid_size_land">Grid Size (land)</string>
+    <string name="inserted_x_songs_into_playlist_x" tools:ignore="PluralsCandidate">Inserted %1$d songs into the playlist %2$s.</string>
     <string name="created_playlist_x">Created playlist %1$s.</string>
-    <string name="deleted_playlist_x">Deleted playlist %1$s.</string>
-    <string name="deleted_x_songs">Deleted %1$d songs.</string>
+    <string name="deleted_playlist_x" tools:ignore="UnusedResources">Deleted playlist %1$s.</string>
+    <string name="deleted_x_songs" tools:ignore="PluralsCandidate">Deleted %1$d songs.</string>
     <string name="could_not_create_playlist">Couldn\u2019t create playlist.</string>
     <string name="delete_playlist_x"><![CDATA[Delete the playlist <b>%1$s</b>?]]></string>
     <string name="clear_playlist_x"><![CDATA[Clear the playlist <b>%1$s</b>? This can\u2019t be undone!]]></string>
@@ -98,12 +98,12 @@
     <string name="clear_playlist_title">Clear playlist</string>
     <string name="save_playlist_title">Save as file</string>
     <string name="add_playlist_title">"Add to playlist"</string>
-    <string name="action_shuffle_all">Shuffle all</string>
-    <string name="action_shuffle_album">Shuffle album</string>
-    <string name="action_shuffle_artist">Shuffle artist</string>
-    <string name="action_shuffle_playlist">Shuffle playlist</string>
-    <string name="action_clear_playing_queue">Clear playing queue</string>
-    <string name="action_save_playing_queue">Save playing queue</string>
+    <string name="action_shuffle_all">Shuffle All</string>
+    <string name="action_shuffle_album">Shuffle Album</string>
+    <string name="action_shuffle_artist">Shuffle Artist</string>
+    <string name="action_shuffle_playlist">Shuffle Playlist</string>
+    <string name="action_clear_playing_queue">Clear Playing Queue</string>
+    <string name="action_save_playing_queue">Save Playing Queue</string>
     <string name="action_go_to_start_directory">Go to start directory</string>
     <string name="action_show_lyrics">Show lyrics</string>
     <string name="last_opened">Last opened</string>
@@ -138,13 +138,13 @@
     <string name="pref_title_classic_notification">Classic notification design</string>
     <string name="pref_title_ignore_media_store_artwork">Ignore Media Store covers</string>
     <string name="pref_title_gapless_playback">Gapless playback</string>
-    <string name="pref_title_force_square_album_art">Square album cover</string>
-    <string name="pref_title_opaque_toolbar_now_playing">Opaque toolbar</string>
-    <string name="pref_title_opaque_statusbar_now_playing">Opaque statusbar</string>
-    <string name="pref_title_larger_title_box_now_playing">Larger title box</string>
-    <string name="pref_title_alternative_progress_slider_now_playing">Alternative progress slider</string>
-    <string name="pref_title_playback_controller_card_now_playing">Show card below playback controls</string>
-    <string name="pref_title_colored_playback_controls_now_playing">Colored playback controls</string>
+    <string name="pref_title_force_square_album_art" tools:ignore="UnusedResources">Square album cover</string>
+    <string name="pref_title_opaque_toolbar_now_playing" tools:ignore="UnusedResources">Opaque toolbar</string>
+    <string name="pref_title_opaque_statusbar_now_playing" tools:ignore="UnusedResources">Opaque statusbar</string>
+    <string name="pref_title_larger_title_box_now_playing" tools:ignore="UnusedResources">Larger title box</string>
+    <string name="pref_title_alternative_progress_slider_now_playing" tools:ignore="UnusedResources">Alternative progress slider</string>
+    <string name="pref_title_playback_controller_card_now_playing" tools:ignore="UnusedResources">Show card below playback controls</string>
+    <string name="pref_title_colored_playback_controls_now_playing" tools:ignore="UnusedResources">Colored playback controls</string>
     <string name="pref_title_audio_ducking">Reduce volume on focus loss</string>
     <string name="pref_title_last_added_interval">Last added playlist interval</string>
     <string name="no_equalizer">No equalizer found.</string>
@@ -154,9 +154,9 @@
     <string name="remove_action">Remove</string>
     <string name="rename_action">Rename</string>
     <string name="create_action">Create</string>
-    <string name="x_selected">%1$d selected</string>
-    <string name="select">Select</string>
-    <string name="default_str">Default</string>
+    <string name="x_selected" tools:ignore="PluralsCandidate">%1$d selected</string>
+    <string name="select" tools:ignore="UnusedResources">Select</string>
+    <string name="default_str" tools:ignore="UnusedResources">Default</string>
     <string name="primary_color">Primary color</string>
     <string name="accent_color">Accent color</string>
     <string name="primary_color_desc">The primary theme color, defaults to red</string>
@@ -175,20 +175,20 @@
     <string name="pref_summary_classic_notification">Use the classic notification design.</string>
     <string name="pref_summary_colored_notification">"Colors the notification in the album cover\u2019s vibrant color."</string>
     <string name="pref_summary_gapless_playback">"Can cause playback issues on some devices."</string>
-    <string name="pref_summary_force_square_album_art">Album covers in the now playing view are always squared.</string>
-    <string name="pref_summary_opaque_toolbar_now_playing">Colors the toolbar.</string>
-    <string name="pref_summary_opaque_statusbar_now_playing">Colors the statusbar.</string>
-    <string name="pref_summary_larger_title_box_now_playing">The title box is higher.</string>
-    <string name="pref_summary_alternative_progress_slider_now_playing">Uses a progressbar which does not cover the album art instead of the default progress slider.</string>
-    <string name="pref_summary_playback_controller_card_now_playing">Shows a card below play/pause, skip, rewind, shuffle and repeat.</string>
+    <string name="pref_summary_force_square_album_art" tools:ignore="UnusedResources">Album covers in the now playing view are always squared.</string>
+    <string name="pref_summary_opaque_toolbar_now_playing" tools:ignore="UnusedResources">Colors the toolbar.</string>
+    <string name="pref_summary_opaque_statusbar_now_playing" tools:ignore="UnusedResources">Colors the statusbar.</string>
+    <string name="pref_summary_larger_title_box_now_playing" tools:ignore="UnusedResources">The title box is higher.</string>
+    <string name="pref_summary_alternative_progress_slider_now_playing" tools:ignore="UnusedResources">Uses a progressbar which does not cover the album art instead of the default progress slider.</string>
+    <string name="pref_summary_playback_controller_card_now_playing" tools:ignore="UnusedResources">Shows a card below play/pause, skip, rewind, shuffle and repeat.</string>
     <string name="pref_summary_ignore_media_store_artwork">Can increase the album cover quality but causes slower image loading times. Only enable this if you have problems with low resolution artworks.</string>
-    <string name="pref_summary_colored_playback_controls_now_playing">Colors play/pause, shuffle and repeat as well as the progress slider in the album cover\u2019s vibrant color.</string>
+    <string name="pref_summary_colored_playback_controls_now_playing" tools:ignore="UnusedResources">Colors play/pause, shuffle and repeat as well as the progress slider in the album cover\u2019s vibrant color.</string>
     <string name="pref_summary_colored_navigation_bar">Colors the navigation bar in the primary color.</string>
     <string name="pref_summary_colored_app_shortcuts">Colors the app shortcuts in the primary color.</string>
     <string name="pref_summary_audio_ducking">Notifications, navigation etc.</string>
     <string name="could_not_download_album_cover">"Couldn\u2019t download a matching album cover."</string>
     <string name="search_hint">Search your library…</string>
-    <string name="rescanning_media">Rescanning media…</string>
+    <string name="rescanning_media" tools:ignore="UnusedResources">Rescanning media…</string>
     <string name="favorites">Favorites</string>
     <string name="last_added">Last added</string>
     <string name="history">History</string>
@@ -197,11 +197,11 @@
     <string name="download_from_last_fm">Download from Last.fm</string>
     <string name="pick_from_local_storage">Pick from local storage</string>
     <string name="web_search">Web search</string>
-    <string name="action_sleep_timer">Sleep timer</string>
+    <string name="action_sleep_timer">Sleep Timer</string>
     <string name="action_set">Set</string>
     <string name="cancel_current_timer">Cancel current timer</string>
     <string name="sleep_timer_canceled">Sleep timer canceled.</string>
-    <string name="sleep_timer_set">Sleep timer set for %d minutes from now.</string>
+    <string name="sleep_timer_set" tools:ignore="PluralsCandidate">Sleep timer set for %d minutes from now.</string>
     <string name="action_new_playlist">New playlist…</string>
     <string name="new_playlist_title">New playlist</string>
     <string name="grid_size_1">1</string>
@@ -212,81 +212,81 @@
     <string name="grid_size_6">6</string>
     <string name="grid_size_7">7</string>
     <string name="grid_size_8">8</string>
-    <string name="colored_footers">Colored footers</string>
-    <string name="special_thanks_to">Special thanks to</string>
+    <string name="colored_footers">Colored Footers</string>
+    <string name="special_thanks_to" tools:ignore="UnusedResources">Special thanks to</string>
     <string name="changelog">Changelog</string>
-    <string name="licenses">Licenses</string>
+    <string name="licenses" tools:ignore="UnusedResources">Licenses</string>
     <string name="permissions_denied">Permissions denied.</string>
     <string name="permission_external_storage_denied">Permission to access external storage denied.</string>
-    <string name="back">back</string>
-    <string name="support_development">Support development</string>
-    <string name="thank_you">Thank you!</string>
-    <string name="restored_previous_purchases">Restored previous purchases.</string>
-    <string name="play_store_illustration_by">Play Store illustration by</string>
-    <string name="version">Version</string>
-    <string name="application">Application</string>
-    <string name="author">Author</string>
-    <string name="write_an_email">Write an email</string>
-    <string name="add_to_google_plus_circles">Add to Google Plus circles</string>
-    <string name="follow_on_twitter">Follow on Twitter</string>
-    <string name="fork_on_github">Fork on GitHub</string>
-    <string name="visit_website">Visit website</string>
-    <string name="report_bugs">Report bugs</string>
-    <string name="report_bugs_summary">Report bugs or request new features.</string>
-    <string name="join_community">Join the Google Plus community</string>
-    <string name="join_community_summary">If you need help or have questions, the Alpha Music Player community on Google Plus is a good place to go.</string>
-    <string name="translate">Translate</string>
-    <string name="translate_summary">Help translating Alpha Music Player to your native language.</string>
-    <string name="rate_on_google_play">Rate</string>
-    <string name="rate_on_google_play_summary">Leave a positive rating on Google Play if you like Alpha Music Player.</string>
-    <string name="donate">Donate</string>
-    <string name="donate_summary">If you think I deserve to get paid for my work, you can leave me a few dollars here.</string>
-    <string name="website">Website</string>
-    <string name="loading_products">Loading products…</string>
-    <string name="up_next">Up next</string>
+    <string name="back" tools:ignore="UnusedResources">back</string>
+    <string name="support_development" tools:ignore="UnusedResources">Support development</string>
+    <string name="thank_you" tools:ignore="UnusedResources">Thank you!</string>
+    <string name="restored_previous_purchases" tools:ignore="UnusedResources">Restored previous purchases.</string>
+    <string name="play_store_illustration_by" tools:ignore="UnusedResources">Play Store illustration by</string>
+    <string name="version" tools:ignore="UnusedResources">Version</string>
+    <string name="application" tools:ignore="UnusedResources">Application</string>
+    <string name="author" tools:ignore="UnusedResources">Author</string>
+    <string name="write_an_email" tools:ignore="UnusedResources">Write an email</string>
+    <string name="add_to_google_plus_circles" tools:ignore="UnusedResources">Add to Google Plus circles</string>
+    <string name="follow_on_twitter" tools:ignore="UnusedResources">Follow on Twitter</string>
+    <string name="fork_on_github" tools:ignore="UnusedResources">Fork on GitHub</string>
+    <string name="visit_website" tools:ignore="UnusedResources">Visit website</string>
+    <string name="report_bugs" tools:ignore="UnusedResources">Report bugs</string>
+    <string name="report_bugs_summary" tools:ignore="UnusedResources">Report bugs or request new features.</string>
+    <string name="join_community" tools:ignore="UnusedResources">Join the Google Plus community</string>
+    <string name="join_community_summary" tools:ignore="UnusedResources">If you need help or have questions, the Buzz Music Player community on Google Plus is a good place to go.</string>
+    <string name="translate" tools:ignore="UnusedResources">Translate</string>
+    <string name="translate_summary" tools:ignore="UnusedResources">Help translating Buzz Music Player to your native language.</string>
+    <string name="rate_on_google_play" tools:ignore="UnusedResources">Rate</string>
+    <string name="rate_on_google_play_summary" tools:ignore="UnusedResources">Leave a positive rating on Google Play if you like Buzz Music Player.</string>
+    <string name="donate" tools:ignore="UnusedResources">Donate</string>
+    <string name="donate_summary" tools:ignore="UnusedResources">If you think I deserve to get paid for my work, you can leave me a few dollars here.</string>
+    <string name="website" tools:ignore="UnusedResources">Website</string>
+    <string name="loading_products" tools:ignore="UnusedResources">Loading products…</string>
+    <string name="up_next">Up Next</string>
     <string name="pref_title_now_playing_screen_appearance">Appearance</string>
-    <string name="intro_label">Introduction</string>
-    <string name="press_back_again_to_exit_intro">Press back again to skip the intro.</string>
-    <string name="welcome_to_AlphaMusic">"Welcome to Alpha Music Player, a beautiful and lightweight music player for Android. "</string>
-    <string name="open_playing_queue_instruction">Swipe the card in the now playing screen up to reveal the full playing queue.</string>
-    <string name="rearrange_playing_queue_instruction">Rearrange the playing queue by dragging a song from its track number.</string>
-    <string name="library">Library</string>
+    <string name="intro_label" tools:ignore="UnusedResources">Introduction</string>
+    <string name="press_back_again_to_exit_intro" tools:ignore="UnusedResources">Press back again to skip the intro.</string>
+    <string name="welcome_to_Ọrin" tools:ignore="UnusedResources">"Welcome to Buzz Music Player, a beautiful and lightweight music player for Android. "</string>
+    <string name="open_playing_queue_instruction" tools:ignore="UnusedResources">Swipe the card in the now playing screen up to reveal the full playing queue.</string>
+    <string name="rearrange_playing_queue_instruction" tools:ignore="UnusedResources">Rearrange the playing queue by dragging a song from its track number.</string>
+    <string name="library">Music Library</string>
     <string name="folders">Folders</string>
     <string name="saved_playlist_to">Saved playlist to %s.</string>
     <string name="failed_to_save_playlist">Failed to save playlist (%s).</string>
     <string name="not_listed_in_media_store"><![CDATA[<b>%s</b> is not listed in the media store.]]></string>
     <string name="nothing_to_scan">Nothing to scan.</string>
-    <string name="scanned_files">Scanned %1$d of %2$d files.</string>
-    <string name="could_not_scan_files">Could not scan %d files.</string>
+    <string name="scanned_files" tools:ignore="PluralsCandidate">Scanned %1$d of %2$d files.</string>
+    <string name="could_not_scan_files" tools:ignore="PluralsCandidate">Could not scan %d files.</string>
     <string name="listing_files">Listing files</string>
     <string name="new_start_directory">%s is the new start directory.</string>
-    <string name="app_widget_big_name">Alpha Music Player - Big</string>
-    <string name="app_widget_classic_name">Alpha Music Player - Classic</string>
-    <string name="app_widget_small_name">Alpha Music Player - Small</string>
-    <string name="app_widget_card_name">Alpha Music Player - Card</string>
-    <string name="report_an_issue">Report an issue</string>
-    <string name="bug_report_issue">Issue</string>
-    <string name="login">Login</string>
-    <string name="title">Title</string>
-    <string name="description">Description</string>
-    <string name="device_info">Device info</string>
-    <string name="bug_report_use_account">Send using GitHub account</string>
-    <string name="bug_report_manual">Send manually</string>
-    <string name="username">Username</string>
-    <string name="password">Password</string>
-    <string name="bug_report_no_title">Please enter an issue title</string>
-    <string name="bug_report_no_description">Please enter an issue description</string>
-    <string name="bug_report_no_username">Please enter your valid GitHub username</string>
-    <string name="bug_report_no_password">Please enter your valid GitHub password</string>
-    <string name="bug_report_uploading">Uploading report to GitHub…</string>
-    <string name="bug_report_failed">Unable to send bug report</string>
-    <string name="bug_report_failed_wrong_credentials">Wrong username or password</string>
-    <string name="bug_report_failed_invalid_token">Invalid access token. Please contact the app developer.</string>
-    <string name="bug_report_failed_issues_not_available">Issues are not enabled for the selected repository. Please contact the app developer.</string>
-    <string name="bug_report_failed_unknown">An unexpected error occurred. Please contact the app developer.</string>
-    <string name="copied_device_info_to_clipboard">Copied device info to clipboard.</string>
-    <string name="your_account_data_is_only_used_for_authentication">Your account data is only used for authentication.</string>
-    <string name="you_will_be_forwarded_to_the_issue_tracker_website">You will be forwarded to the issue tracker website.</string>
+    <string name="app_widget_big_name">Buzz Music Player - Big</string>
+    <string name="app_widget_classic_name">Buzz Music Player - Classic</string>
+    <string name="app_widget_small_name">Buzz Music Player - Small</string>
+    <string name="app_widget_card_name">Buzz Music Player - Card</string>
+    <string name="report_an_issue" tools:ignore="UnusedResources">Report an issue</string>
+    <string name="bug_report_issue" tools:ignore="UnusedResources">Issue</string>
+    <string name="login" tools:ignore="UnusedResources">Login</string>
+    <string name="title" tools:ignore="UnusedResources">Title</string>
+    <string name="description" tools:ignore="UnusedResources">Description</string>
+    <string name="device_info" tools:ignore="UnusedResources">Device info</string>
+    <string name="bug_report_use_account" tools:ignore="UnusedResources">Send using GitHub account</string>
+    <string name="bug_report_manual" tools:ignore="UnusedResources">Send manually</string>
+    <string name="username" tools:ignore="UnusedResources">Username</string>
+    <string name="password" tools:ignore="UnusedResources">Password</string>
+    <string name="bug_report_no_title" tools:ignore="UnusedResources">Please enter an issue title</string>
+    <string name="bug_report_no_description" tools:ignore="UnusedResources">Please enter an issue description</string>
+    <string name="bug_report_no_username" tools:ignore="UnusedResources">Please enter your valid GitHub username</string>
+    <string name="bug_report_no_password" tools:ignore="UnusedResources">Please enter your valid GitHub password</string>
+    <string name="bug_report_uploading" tools:ignore="UnusedResources">Uploading report to GitHub…</string>
+    <string name="bug_report_failed" tools:ignore="UnusedResources">Unable to send bug report</string>
+    <string name="bug_report_failed_wrong_credentials" tools:ignore="UnusedResources">Wrong username or password</string>
+    <string name="bug_report_failed_invalid_token" tools:ignore="UnusedResources">Invalid access token. Please contact the app developer.</string>
+    <string name="bug_report_failed_issues_not_available" tools:ignore="UnusedResources">Issues are not enabled for the selected repository. Please contact the app developer.</string>
+    <string name="bug_report_failed_unknown" tools:ignore="UnusedResources">An unexpected error occurred. Please contact the app developer.</string>
+    <string name="copied_device_info_to_clipboard" tools:ignore="UnusedResources">Copied device info to clipboard.</string>
+    <string name="your_account_data_is_only_used_for_authentication" tools:ignore="UnusedResources">Your account data is only used for authentication.</string>
+    <string name="you_will_be_forwarded_to_the_issue_tracker_website" tools:ignore="UnusedResources">You will be forwarded to the issue tracker website.</string>
     <!-- App Shortcuts -->
     <string name="app_shortcut_shuffle_all_long">@string/action_shuffle_all</string>
     <string name="app_shortcut_shuffle_all_short">Shuffle</string>
@@ -298,7 +298,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="about_app_text">Alpha Music Player is a stunning Music Player, beautifully crafted with Material Design in mind and packed with some extraordinary powerful features.
+    <string name="about_app_text" tools:ignore="UnusedResources">Buzz Music Player is a stunning Music Player, beautifully crafted with Material Design in mind and packed with some extraordinary powerful features.
 It is one of the Best Music Players which can fulfill all your Musical needs.\n\n
 The built-in Equalizer adds a great value to your music hearing experience.\n\n
 The more attractive and intuitive User Interface combined with the crisp and clean layouts will give you the best user experience.</string>

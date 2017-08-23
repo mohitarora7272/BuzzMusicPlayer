@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.alpha.music.views.WidthFitSquareLayout
+            <com.appsboy.buzzmusic.views.WidthFitSquareLayout
                 android:id="@+id/image_container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -32,7 +32,7 @@
                     android:transitionName="@string/transition_album_art"
                     tools:ignore="UnusedAttribute" />
 
-            </com.alpha.music.views.WidthFitSquareLayout>
+            </com.appsboy.buzzmusic.views.WidthFitSquareLayout>
 
             <LinearLayout
                 android:id="@+id/header"
@@ -62,7 +62,8 @@
                         android:inputType="text|textCapWords"
                         android:singleLine="true"
                         android:textAppearance="@style/TextAppearance.AppCompat.Title"
-                        android:textColor="@color/ate_primary_text_dark" />
+                        android:textColor="@color/ate_primary_text_dark"
+                        tools:ignore="Deprecated" />
 
                 </android.support.design.widget.TextInputLayout>
 
@@ -91,7 +92,8 @@
                         android:hint="@string/album_artist"
                         android:inputType="text|textCapWords"
                         android:singleLine="true"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        tools:ignore="Deprecated" />
 
                 </android.support.design.widget.TextInputLayout>
 
@@ -109,7 +111,8 @@
                         android:hint="@string/genre"
                         android:inputType="text|textCapWords"
                         android:singleLine="true"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        tools:ignore="Deprecated" />
 
                 </android.support.design.widget.TextInputLayout>
 
@@ -127,7 +130,8 @@
                         android:hint="@string/year"
                         android:inputType="text|number"
                         android:singleLine="true"
-                        android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+                        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                        tools:ignore="Deprecated" />
 
                 </android.support.design.widget.TextInputLayout>
 

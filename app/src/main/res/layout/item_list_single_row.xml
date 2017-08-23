@@ -7,7 +7,7 @@
     android:foreground="?attr/rectSelector"
     tools:ignore="UnusedAttribute">
 
-    <com.alpha.music.views.IconImageView
+    <com.appsboy.buzzmusic.views.IconImageView
         android:id="@+id/drag_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
@@ -50,7 +50,8 @@
                 android:minHeight="40dp"
                 android:singleLine="true"
                 android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-                android:visibility="gone" />
+                android:visibility="gone"
+                tools:ignore="Deprecated" />
 
         </FrameLayout>
 
@@ -66,9 +67,10 @@
             android:layout_weight="1"
             android:fontFamily="sans-serif"
             android:singleLine="true"
-            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+            tools:ignore="Deprecated" />
 
-        <com.alpha.music.views.IconImageView
+        <com.appsboy.buzzmusic.views.IconImageView
             android:id="@+id/menu"
             style="@style/OverFlowButton"
             android:layout_gravity="center_vertical"

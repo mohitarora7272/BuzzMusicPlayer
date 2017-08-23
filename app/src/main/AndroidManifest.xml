@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.alpha.music">
+    package="com.appsboy.buzzmusic">
 
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -18,10 +18,12 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
+        android:screenOrientation="portrait"
         android:theme="@style/Theme.AlphaMusic.Light"
         tools:ignore="AllowBackup,UnusedAttribute">
 
-        <activity android:name="com.alpha.music.ui.activities.MainActivity">
+        <activity android:name="com.appsboy.buzzmusic.ui.activities.MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.MUSIC_PLAYER" />
@@ -69,7 +71,7 @@
                 <data android:mimeType="application/x-ogg" />
                 <data android:mimeType="application/itunes" />
             </intent-filter>
-            <intent-filter tools:ignore="GoogleAppIndexingWarning">
+            <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
@@ -92,33 +94,36 @@
                 <data android:mimeType="vnd.android.cursor.dir/audio" />
             </intent-filter>
         </activity>
-        <activity android:name="com.alpha.music.ui.activities.AlbumDetailActivity" />
-        <activity android:name="com.alpha.music.ui.activities.ArtistDetailActivity" />
-        <activity android:name="com.alpha.music.ui.activities.PlaylistDetailActivity" />
+        <activity android:name="com.appsboy.buzzmusic.ui.activities.AlbumDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.appsboy.buzzmusic.ui.activities.ArtistDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="com.appsboy.buzzmusic.ui.activities.PlaylistDetailActivity"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name="com.alpha.music.ui.activities.tageditor.SongTagEditorActivity"
+            android:name="com.appsboy.buzzmusic.ui.activities.tageditor.SongTagEditorActivity"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name="com.alpha.music.ui.activities.tageditor.AlbumTagEditorActivity"
+            android:name="com.appsboy.buzzmusic.ui.activities.tageditor.AlbumTagEditorActivity"
+            android:screenOrientation="portrait"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name="com.alpha.music.ui.activities.SearchActivity" />
+        <activity android:name="com.appsboy.buzzmusic.ui.activities.SearchActivity"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name="com.alpha.music.ui.activities.SettingsActivity"
+            android:name="com.appsboy.buzzmusic.ui.activities.SettingsActivity"
+            android:screenOrientation="portrait"
             android:label="@string/action_settings" />
         <activity
-            android:name="com.alpha.music.ui.activities.intro.AppIntroActivity"
-            android:label="@string/intro_label"
-            android:theme="@style/Theme.Intro" />
-        <activity
-            android:name="com.alpha.music.appshortcuts.AppShortcutLauncherActivity"
+            android:name="com.appsboy.buzzmusic.appshortcuts.AppShortcutLauncherActivity"
             android:launchMode="singleInstance"
             android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 
         <service
-            android:name="com.alpha.music.service.MusicService"
+            android:name="com.appsboy.buzzmusic.service.MusicService"
             android:enabled="true" />
 
-        <receiver android:name="com.alpha.music.service.MediaButtonIntentReceiver">
+        <receiver android:name="com.appsboy.buzzmusic.service.MediaButtonIntentReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.MEDIA_BUTTON" />
             </intent-filter>
@@ -131,21 +136,21 @@
             android:name="com.lge.support.SPLIT_WINDOW"
             android:value="true" />
         <meta-data
-            android:name="com.alpha.music.glide.AlphaMusicGlideModule"
+            android:name="com.appsboy.buzzmusic.glide.AlphaMusicGlideModule"
             android:value="GlideModule" />
         <meta-data
             android:name="com.bumptech.glide.integration.okhttp3.OkHttpGlideModule"
             android:value="GlideModule" />
 
         <!-- Widgets -->
-        <receiver android:name="com.alpha.music.appwidgets.BootReceiver">
+        <receiver android:name="com.appsboy.buzzmusic.appwidgets.BootReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <action android:name="android.intent.action.QUICKBOOT_POWERON" />
             </intent-filter>
         </receiver>
         <receiver
-            android:name="com.alpha.music.appwidgets.AppWidgetBig"
+            android:name="com.appsboy.buzzmusic.appwidgets.AppWidgetBig"
             android:exported="false"
             android:label="@string/app_widget_big_name">
             <intent-filter>
@@ -157,7 +162,7 @@
                 android:resource="@xml/app_widget_big_info" />
         </receiver>
         <receiver
-            android:name="com.alpha.music.appwidgets.AppWidgetClassic"
+            android:name="com.appsboy.buzzmusic.appwidgets.AppWidgetClassic"
             android:exported="false"
             android:label="@string/app_widget_classic_name">
             <intent-filter>
@@ -169,7 +174,7 @@
                 android:resource="@xml/app_widget_classic_info" />
         </receiver>
         <receiver
-            android:name="com.alpha.music.appwidgets.AppWidgetSmall"
+            android:name="com.appsboy.buzzmusic.appwidgets.AppWidgetSmall"
             android:exported="false"
             android:label="@string/app_widget_small_name">
             <intent-filter>
@@ -181,7 +186,7 @@
                 android:resource="@xml/app_widget_small_info" />
         </receiver>
         <receiver
-            android:name="com.alpha.music.appwidgets.AppWidgetCard"
+            android:name="com.appsboy.buzzmusic.appwidgets.AppWidgetCard"
             android:exported="false"
             android:label="@string/app_widget_card_name">
             <intent-filter>
